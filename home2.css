@@ -1,0 +1,233 @@
+/* Base resets, unchanged */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+span {
+  color: rgb(23, 151, 198);
+}
+
+/* Topbar wrapper */
+.topbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 15px 40px;
+  gap: 250px;
+  background-color: rgb(187, 16, 16);
+  color: #fff;
+  overflow: visible;  /* changed from hidden/auto to visible */
+}
+
+/* Header inside topbar */
+.header {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 40px;
+}
+.logo img {
+  height: 70px;
+}
+.logo h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffcc00;
+}
+
+/* Bus container & animation */
+.bus-container {
+  position: absolute;
+  top: 9%;
+  transform: translateY(-50%);
+  left: 0px;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 200;
+  margin-left: 450px;
+  
+}
+
+@keyframes drive {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: calc(10% + 5px);
+  }
+}
+
+.moving-bus {
+  position: absolute;
+  height: 70px;
+  animation: drive 3s linear infinite;
+  z-index: 250;  /* make sure it’s on top */
+}
+
+/* Rest of your nav, links, dropdown, etc. (unchanged) ... */
+
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+.hamburger:hover {
+  transform: rotate(90deg);
+}
+.navBar {
+  display: block;
+}
+.linkRight {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  list-style: none;
+  align-items: center;
+}
+.linkRight a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  /* gap: 30px; */
+  transition: color 0.3s ease;
+}
+.linkRight a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: black;
+  transition: width 0.3s ease;
+}
+.linkRight a:hover {
+  color: black;
+}
+.linkRight a:hover::after {
+  width: 100%;
+}
+/* .linkRight input[type="search"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  height: 40px;
+} */
+.linkRight button {
+  padding: 6px 12px;
+  background: #ffcc00;
+  width: 120px;
+  color: #000;
+  border: none;
+  height: 40px;
+  border-top-right-radius: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.linkRight button:hover {
+  background: rgb(102, 194, 201);
+  color: #555;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 150px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 1000;
+}
+.dropdown-menu li {
+  width: 100%;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.dropdown-menu li a:hover {
+  background: rgb(24, 46, 54);
+  color: white;
+  font-weight: bold;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Mobile / responsive */
+@media (max-width: 450px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    gap: 50px;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+  .hamburger {
+    display: block;
+    margin-left: 110px;
+  }
+  .navBar {
+    display: none;
+    width: 100%;
+    background: #fff;
+    padding: 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .navBar.active {
+    display: block;
+  }
+  .linkRight {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+  .linkRight a {
+    color: #333;
+    font-size: 18px;
+  }
+  .linkRight button {
+    width: 100%;
+    border-radius: 6px;
+  }
+  .linkRight input[type="search"] {
+    width: 100%;
+    border-radius: 6px;
+  }
+  .dropdown-menu {
+    margin-bottom: 40px;
+    margin-left: 80px;
+  }
+}
