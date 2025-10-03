@@ -16,9 +16,7 @@
       <h2>STACKLY</h2>
     </div>
     <div class="bus-container">
-        <!-- <img src="./bus.png" alt="" height="70px"> -->
-        <!-- <img src="./travel.png" alt="" height="70px"> -->
-        <img src="./bus.png" alt="" class="moving-bus" height="70px">
+      <img src="./bus.png" alt="" class="moving-bus" height="70px">
     </div>
     <button class="hamburger" id="hamburger">☰</button>
   </header>
@@ -32,19 +30,21 @@
             <li><a href="./home2.html">Home page 2</a></li>
           </ul>
         </li>
-        <li><a href="">Bus Tickets</a></li>
-        <li><a href="">Train Tickets</a></li>
-        <li><a href="">Offers</a></li>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Contact Us</a></li>
-        <li><a href="">Terms & Conditions</a></li>
+        <li><a href="#">Bus Tickets</a></li>
+        <li><a href="#">Train Tickets</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
         <li class="sign"><button>Log / Sign In</button></li>
       </ul>
     </div>
   </nav>
 </div>
 
-  
+
+
+
 
 
 
@@ -59,10 +59,9 @@
     </p>
     <a href="#services" class="cta-button">Explore Our Services</a>
   </div>
-  <!-- <div class="hero-image">
-    <img src="./bus.png" alt="Transport Fleet" />
-  </div> -->
 </section>
+
+
 
 
 
@@ -192,11 +191,12 @@
 
 
 
-
 <section class="pricing-section">
   <div class="container">
 
     <h2>Our Fixed Routes & Fares</h2>
+     <!-- Chennai Routes -->
+    <h3>🚍 Chennai Routes</h3>
     <table class="fare-table">
       <thead>
         <tr>
@@ -217,25 +217,131 @@
           <td>₹ 2,000</td>
         </tr>
         <tr>
+          <td>Chennai → Coimbatore</td>
+          <td>SUV</td>
+          <td>₹ 2,200</td>
+        </tr>
+        <tr>
+          <td>Chennai → Hyderabad</td>
+          <td>Luxury Coach</td>
+          <td>₹ 3,000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Bengaluru Routes -->
+    <h3>🚍 Bengaluru Routes</h3>
+    <table class="fare-table">
+      <thead>
+        <tr>
+          <th>Route</th>
+          <th>Vehicle Type</th>
+          <th>Estimated Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
           <td>Bengaluru → Mysore</td>
           <td>SUV</td>
           <td>₹ 900</td>
         </tr>
         <tr>
-          <td>Coimbatore → Chennai</td>
+          <td>Bengaluru → Chennai</td>
+          <td>Sleeper Coach</td>
+          <td>₹ 1,700</td>
+        </tr>
+        <tr>
+          <td>Bengaluru → Hyderabad</td>
+          <td>Luxury Bus</td>
+          <td>₹ 2,500</td>
+        </tr>
+        <tr>
+          <td>Bengaluru → Pune</td>
           <td>Truck</td>
-          <td>₹ 3,500</td>
+          <td>₹ 3,800</td>
         </tr>
       </tbody>
     </table>
 
-    <div class="estimator">
+    <!-- Mumbai Routes -->
+    <h3>🚍 Mumbai Routes</h3>
+    <table class="fare-table">
+      <thead>
+        <tr>
+          <th>Route</th>
+          <th>Vehicle Type</th>
+          <th>Estimated Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mumbai → Pune</td>
+          <td>Sedan</td>
+          <td>₹ 1,200</td>
+        </tr>
+        <tr>
+          <td>Mumbai → Goa</td>
+          <td>Luxury Coach</td>
+          <td>₹ 3,500</td>
+        </tr>
+        <tr>
+          <td>Mumbai → Ahmedabad</td>
+          <td>SUV</td>
+          <td>₹ 2,800</td>
+        </tr>
+        <tr>
+          <td>Mumbai → Delhi</td>
+          <td>Truck</td>
+          <td>₹ 6,500</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Delhi Routes -->
+    <h3>🚍 Delhi Routes</h3>
+    <table class="fare-table">
+      <thead>
+        <tr>
+          <th>Route</th>
+          <th>Vehicle Type</th>
+          <th>Estimated Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Delhi → Agra</td>
+          <td>Sedan</td>
+          <td>₹ 1,400</td>
+        </tr>
+        <tr>
+          <td>Delhi → Jaipur</td>
+          <td>Van</td>
+          <td>₹ 2,000</td>
+        </tr>
+        <tr>
+          <td>Delhi → Chandigarh</td>
+          <td>SUV</td>
+          <td>₹ 2,500</td>
+        </tr>
+        <tr>
+          <td>Delhi → Lucknow</td>
+          <td>Luxury Coach</td>
+          <td>₹ 3,800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <div class="estimator">
       <h3>Fare Estimator</h3>
       <form id="estimatorForm">
+        
+        
         <div class="form-group">
           <label for="distance">Distance (km)</label>
-          <input type="number" id="distance" name="distance" min="1" placeholder="e.g. 100" required />
+          <input type="number" id="distance" name="distance" min="1" placeholder="e.g. 120" required />
         </div>
+
+        
         <div class="form-group">
           <label for="vehicle">Vehicle Type</label>
           <select id="vehicle" name="vehicle">
@@ -245,18 +351,48 @@
             <option value="truck">Truck</option>
           </select>
         </div>
+
+       
+        <div class="form-group">
+          <label for="passengers">Passengers</label>
+          <select id="passengers" name="passengers">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5+</option>
+          </select>
+        </div>
+
+        
+        <div class="form-group">
+          <label for="tripType">Trip Type</label>
+          <select id="tripType" name="tripType">
+            <option value="oneway">One Way</option>
+            <option value="round">Round Trip</option>
+          </select>
+        </div>
+
+
+
+        
+        <div class="form-group">
+          <label for="promo">Promo Code</label>
+          <input type="text" id="promo" name="promo" placeholder="Enter promo (optional)">
+        </div>
+
+  
         <button type="submit">Estimate Fare</button>
       </form>
+
       <div class="estimate-result" id="estimateResult">
-        <!-- Result will appear here -->
-        <p>Starting from: <span class="fare-value">—</span></p>
+        <p>Estimated Fare: <span class="fare-value">—</span></p>
+        <p class="breakdown"></p>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </section>
-
-
 
 
 
@@ -308,27 +444,36 @@
 
 
 
+
 <section class="tracking-section">
-  <div class="tracking-container">
+  <div class="navigate">
+    <img src="./navigate.png" alt="" height="400px">
+  </div>
+  <div class="tracking-container modern-tracking">
     <h2>Track Your Shipment / Trip</h2>
-    <form id="trackingForm">
-      <input
-        type="text"
-        id="trackingInput"
-        placeholder="Enter tracking number / trip code"
-        required
-      />
-      <button type="submit">Track</button>
+    
+    <form id="trackingForm" class="tracking-form">
+      <div class="input-group">
+        <input
+          type="text"
+          id="trackingInput"
+          placeholder="Enter tracking number / trip code"
+          required
+        />
+        <button type="submit">Track Now</button>
+      </div>
     </form>
-    <div id="map" class="map"></div>
-    <div class="status-info" id="statusInfo">
-      <!-- Dynamic status text will go here -->
-      <p>Status: <span id="statusText">—</span></p>
-      <p>Last updated: <span id="lastUpdated">—</span></p>
+    
+    <div class="map-container">
+      <div id="map" class="map"></div>
+      <div class="status-overlay" id="statusInfo">
+        <h3>Shipment Status</h3>
+        <p>Status: <span id="statusText">—</span></p>
+        <p>Last Updated: <span id="lastUpdated">—</span></p>
+      </div>
     </div>
   </div>
 </section>
-
 
 
 
@@ -339,18 +484,16 @@
 <section class="testimonials-section">
   <div class="container">
     <h2 class="section-title">What Our Customers Say</h2>
-    <div class="testimonials-grid">
-
-      <div class="testimonial-card">
+    
+    <div class="testimonials-slider">
+      <div class="testimonial-card active">
         <div class="testimonial-text">“Excellent service! The transport was on time, communication was clear, and the driver was very professional.”</div>
         <div class="testimonial-footer">
-          <img src="avatar1.jpg" alt="Customer 1" class="testimonial-avatar">
+          <img src="./man 1.jpg" alt="Customer 1" class="testimonial-avatar">
           <div class="testimonial-info">
             <h3 class="testimonial-name">Alice Williams</h3>
             <p class="testimonial-role">Co-Founder, StartupX</p>
-            <div class="testimonial-stars">
-              ★★★★☆  <!-- You can replace with icons or SVGs -->
-            </div>
+            <div class="testimonial-stars">★★★★☆</div>
           </div>
         </div>
       </div>
@@ -358,13 +501,11 @@
       <div class="testimonial-card">
         <div class="testimonial-text">“I’ve used their logistics service multiple times — always reliable, safe, and cost-efficient. Highly recommend!”</div>
         <div class="testimonial-footer">
-          <img src="avatar2.jpg" alt="Customer 2" class="testimonial-avatar">
+          <img src="./man 2.jpg" alt="Customer 2" class="testimonial-avatar">
           <div class="testimonial-info">
             <h3 class="testimonial-name">Rajesh Kumar</h3>
             <p class="testimonial-role">Logistics Manager, FreightCo</p>
-            <div class="testimonial-stars">
-              ★★★★★
-            </div>
+            <div class="testimonial-stars">★★★★★</div>
           </div>
         </div>
       </div>
@@ -372,266 +513,18 @@
       <div class="testimonial-card">
         <div class="testimonial-text">“Great rates and customer support. The tracking feature is especially useful — I always know where the shipment is.”</div>
         <div class="testimonial-footer">
-          <img src="avatar3.jpg" alt="Customer 3" class="testimonial-avatar">
+          <img src="./women.jpg" alt="Customer 3" class="testimonial-avatar">
           <div class="testimonial-info">
             <h3 class="testimonial-name">Meera Singh</h3>
             <p class="testimonial-role">Small Business Owner</p>
-            <div class="testimonial-stars">
-              ★★★★☆
-            </div>
+            <div class="testimonial-stars">★★★★☆</div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-
-
-
-
-
-
-<section class="safety-section" aria-labelledby="safety-heading">
-  <div class="safety-container">
-
-    <header class="safety-header">
-      <h2 id="safety-heading">Safety · Quality · Compliance</h2>
-      <p class="lead">Licensed, insured and audited — we follow industry best practices so your shipments and passengers stay safe.</p>
-    </header>
-
-    <!-- Certification badges -->
-    <div class="badges-row" aria-hidden="false">
-      <div class="badge">
-        <!-- simple SVG badge -->
-        <svg viewBox="0 0 48 48" class="badge-icon" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#eaf6ff"/><path d="M14 25l6 5 14-14" stroke="#007bff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div class="badge-text">
-          <strong>ISO 39001</strong>
-          <small>Road Traffic Safety Management</small>
-        </div>
-      </div>
-
-      <div class="badge">
-        <svg viewBox="0 0 48 48" class="badge-icon" aria-hidden="true"><rect x="4" y="6" width="40" height="36" rx="4" fill="#fff4e6"/><path d="M12 20h24M12 28h16" stroke="#f39c12" stroke-width="2.5" stroke-linecap="round"/></svg>
-        <div class="badge-text">
-          <strong>Insured & Bonded</strong>
-          <small>Commercial vehicle insurance</small>
-        </div>
-      </div>
-
-      <div class="badge">
-        <svg viewBox="0 0 48 48" class="badge-icon" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#eefbf3"/><path d="M14 30l6-6 10 10" stroke="#28a745" stroke-width="3" fill="none"/></svg>
-        <div class="badge-text">
-          <strong>Driver Vetting</strong>
-          <small>Background & license checks</small>
-        </div>
-      </div>
-    </div>
-
-    <!-- Quick checklist cards -->
-    <div class="cards-grid">
-      <article class="card">
-        <h3>Driver Screening</h3>
-        <p>Criminal & driving-record checks, ID verification, ongoing/periodic screenings and random drug & alcohol tests.</p>
-        <ul class="mini-list">
-          <li>Criminal database & local checks</li>
-          <li>License & endorsements verified</li>
-          <li>Continuous monitoring / rechecks</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Vehicle Maintenance</h3>
-        <p>Preventive maintenance schedule, daily pre-trip checks and centralised service history for every vehicle.</p>
-        <ul class="mini-list">
-          <li>Manufacturer intervals + mileage checks</li>
-          <li>Inspection logs & parts traceability</li>
-          <li>Emergency repair protocol</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Insurance & Permits</h3>
-        <p>Commercial insurance coverage, valid registration, route permits and Pollution Under Control (PUC) certificates available.</p>
-        <ul class="mini-list">
-          <li>Third-party & commercial policy</li>
-          <li>Vehicle RC, Fitness & permits</li>
-          <li>Claims & incident handling</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Training & Audits</h3>
-        <p>Driver safety training, defensive driving, incident reporting and third-party safety audits to keep standards high.</p>
-        <ul class="mini-list">
-          <li>Induction & refresher training</li>
-          <li>Monthly safety drills</li>
-          <li>Independent audits</li>
-        </ul>
-      </article>
-    </div>
-
-    <!-- Expandable details / documents -->
-    <div class="details-row">
-      <div class="details-left">
-        <h4>View compliance documents</h4>
-        <p>We publish audit summaries, certificate snapshots and insurance summaries on request. Request access or download certificates below.</p>
-        <div class="actions">
-          <button id="requestDocsBtn" class="btn btn-primary" type="button">Request Documents</button>
-          <a href="#" class="btn btn-outline" id="viewPolicy">View Safety Policy</a>
-        </div>
-      </div>
-
-      <div class="details-right">
-        <div class="toggle" id="accordion">
-          <button class="acc-btn" data-target="acc1">Driver Vetting Policy</button>
-          <div class="acc-panel" id="acc1">
-            <p>Background checks include national criminal checks, licence validation, prior employer verification and periodic testing.</p>
-          </div>
-
-          <button class="acc-btn" data-target="acc2">Maintenance & Inspection</button>
-          <div class="acc-panel" id="acc2">
-            <p>All vehicles follow a preventive maintenance schedule; records kept for each service, tyre checks and safety inspections pre-trip.</p>
-          </div>
-
-          <button class="acc-btn" data-target="acc3">Incident & Claims Procedure</button>
-          <div class="acc-panel" id="acc3">
-            <p>Immediate incident reporting, insurer notification, root-cause investigation and corrective action tracking.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer class="safety-footer">
-      <small>Need certification copies for audits or RFPs? Click “Request Documents” and enter your email — we'll respond within 24 hours.</small>
-    </footer>
-
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-<section class="contact-section" aria-labelledby="contact-heading">
-  <div class="contact-container">
-    <header class="contact-header">
-      <h2 id="contact-heading">Get in Touch</h2>
-      <p>We’re here to help — reach us by phone, email, or message us using the form below.</p>
-    </header>
-
-    <div class="contact-main">
-      <div class="contact-info">
-        <div class="info-block">
-          <h3>Customer Support</h3>
-          <p><strong>Phone:</strong> <a href="tel:+912345678901">+91 23456 78901</a></p>
-          <p><strong>Email:</strong> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a></p>
-        </div>
-        <div class="info-block">
-          <h3>Office Address</h3>
-          <address>
-            Transport HQ Pvt Ltd<br>
-            123, Logistics Street<br>
-            Chennai, Tamil Nadu, India<br>
-            PIN 600001
-          </address>
-        </div>
-        <div class="info-block">
-          <h3>Help Center</h3>
-          <p>Visit our <a href="/help">Help / FAQ page</a> for guides, troubleshooting and self-service support.</p>
-        </div>
-      </div>
-
-      <div class="contact-form">
-        <h3>Send Us a Message</h3>
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone (optional)</label>
-            <input type="tel" id="phone" name="phone" placeholder="Your phone" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-        <div class="form-response" id="formResponse" aria-live="polite"></div>
-      </div>
-    </div>
-
-    <div class="chat-widget-placeholder">
-      <!-- Here you can place your chat widget script or icon -->
-      <button class="chat-btn">Chat with us</button>
-    </div>
-  </div>
-</section>
-  
-
-
-
-
-
-
-
-
-<footer class="site-footer">
-  <div class="footer-container">
-    <!-- Company Info -->
-    <div class="footer-column">
-      <img src="logo.png" alt="Company Logo" class="footer-logo" />
-      <p class="footer-description">Reliable transport solutions across India. Safe, timely, and insured.</p>
-      <p class="footer-contact">
-        <strong>Contact Us:</strong><br />
-        <a href="tel:+912345678901">+91 23456 78901</a><br />
-        <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-column">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/services">Our Services</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/help">Help Center</a></li>
-      </ul>
-    </div>
-
-    <!-- Social Media -->
-    <div class="footer-column">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
-        <a href="https://facebook.com/yourcompany" target="_blank" class="social-icon">FB</a>
-        <a href="https://twitter.com/yourcompany" target="_blank" class="social-icon">TW</a>
-        <a href="https://instagram.com/yourcompany" target="_blank" class="social-icon">IG</a>
-        <a href="https://linkedin.com/company/yourcompany" target="_blank" class="social-icon">LI</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Legal & Copyright -->
-  <div class="footer-bottom">
-    <p>&copy; 2025 Transport HQ Pvt Ltd. All rights reserved.</p>
-    <p>
-      <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
-    </p>
-  </div>
-</footer>
 
 
 
