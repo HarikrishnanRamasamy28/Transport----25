@@ -39,3 +39,26 @@ testimonials[0].classList.add('active');
 
 // Auto slide every 3 seconds
 setInterval(showNextTestimonial, 3000);
+
+
+
+
+
+
+/* safety section */
+document.querySelectorAll('.acc-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.getAttribute('data-target');
+    const panel = document.getElementById(targetId);
+    const isOpen = btn.classList.contains('active');
+
+    // close all
+    document.querySelectorAll('.acc-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.acc-panel').forEach(p => p.style.maxHeight = null);
+
+    if (!isOpen) {
+      btn.classList.add('active');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  });
+});
