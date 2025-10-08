@@ -45,7 +45,7 @@
 
 
 
-<section class="how-it-works">
+<section class="how-it-works slide-in-section">
   <div class="container">
     <h2>How It Works</h2>
     <div class="steps">
@@ -72,6 +72,7 @@
     </div>
   </div>
 </section>
+
 
 
 
@@ -131,38 +132,75 @@
   <h2>Popular Routes</h2>
   <p class="subtitle">Quick selection of frequently booked journeys</p>
   <div class="routes-grid">
-    <a href="/search?from=Chennai&to=Madurai" class="route-card">
-      <div class="route-image">
-        <img src="./hero_img_4.png" alt="Chennai to Madurai" height="20px" width="20px">
-      </div>
-      <div class="route-info">
-        <h3>Chennai → Madurai</h3>
-      </div>
-    </a>
-    <a href="/search?from=Chennai&to=Bangalore" class="route-card">
-      <div class="route-image">
-        <img src="./hero_img_4.png" alt="Chennai to Bangalore">
-      </div>
-      <div class="route-info">
-        <h3>Chennai → Bangalore</h3>
-      </div>
-    </a>
-    <a href="/search?from=Coimbatore&to=Ooty" class="route-card">
-      <div class="route-image">
-        <img src="./hero_img_4.png" alt="Coimbatore to Ooty">
-      </div>
-      <div class="route-info">
-        <h3>Coimbatore → Ooty</h3>
-      </div>
-    </a>
-    <a href="/search?from=Trichy&to=Rameswaram" class="route-card">
-      <div class="route-image">
-        <img src="./hero_img_4.png" alt="Trichy to Rameswaram">
-      </div>
-      <div class="route-info">
-        <h3>Trichy → Rameswaram</h3>
-      </div>
-    </a>
+    <div class="routes-slider">
+      <!-- original cards -->
+      <a href="/search?from=Chennai&to=Madurai" class="route-card">
+        <div class="route-image">
+          <img src="./hero_img_4.png" alt="Chennai to Madurai">
+        </div>
+        <div class="route-info">
+          <h3>Chennai → Madurai</h3>
+        </div>
+      </a>
+      <a href="/search?from=Chennai&to=Bangalore" class="route-card">
+        <div class="route-image">
+          <img src="./hero_img_4.png" alt="Chennai to Bangalore">
+        </div>
+        <div class="route-info">
+          <h3>Chennai → Bangalore</h3>
+        </div>
+      </a>
+      <a href="/search?from=Coimbatore&to=Ooty" class="route-card">
+        <div class="route-image">
+          <img src="./hero_img_4.png" alt="Coimbatore to Ooty">
+        </div>
+        <div class="route-info">
+          <h3>Coimbatore → Ooty</h3>
+        </div>
+      </a>
+      <a href="/search?from=Trichy&to=Rameswaram" class="route-card">
+        <div class="route-image">
+          <img src="./hero_img_4.png" alt="Trichy to Rameswaram">
+        </div>
+        <div class="route-info">
+          <h3>Trichy → Rameswaram</h3>
+        </div>
+      </a>
+
+      <!-- duplicate the same cards for looping -->
+      <a href="/search?from=Chennai&to=Madurai" class="route-card">
+        <div class="route-image">
+          <img src="./hero_img_4.png" alt="Chennai to Madurai">
+        </div>
+        <div class="route-info">
+          <h3>Chennai → Madurai</h3>
+        </div>
+      </a>
+      <a href="/search?from=Chennai&to=Bangalore" class="route-card">
+        <div class="route-image">
+          <img src="./hero_img_4.png" alt="Chennai to Bangalore">
+        </div>
+        <div class="route-info">
+          <h3>Chennai → Bangalore</h3>
+        </div>
+      </a>
+      <a href="/search?from=Coimbatore&to=Ooty" class="route-card">
+        <div class="route-image">
+          <img src="./hero_img_4.png" alt="Coimbatore to Ooty">
+        </div>
+        <div class="route-info">
+          <h3>Coimbatore → Ooty</h3>
+        </div>
+      </a>
+      <a href="/search?from=Trichy&to=Rameswaram" class="route-card">
+        <div class="route-image">
+          <img src="./hero_img_4.png" alt="Trichy to Rameswaram">
+        </div>
+        <div class="route-info">
+          <h3>Trichy → Rameswaram</h3>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -384,54 +422,48 @@
       </form>
     </div>
   </div>
-</section>
 
+  <div class="confirmation">
+    <h1>Booking Confirmed!</h1>
+    <p>Your reservation has been successfully processed. Below are your booking details:</p>
 
+    <div class="details">
+      <h2>Booking Information</h2>
+      <div class="inform">
+        <p><strong>Booking ID:</strong> #123456789</p>
+        <p><strong>Passenger Name:</strong> John Doe</p>
+        <p><strong>Route:</strong> Chennai → Madurai</p>
+        <p><strong>Bus:</strong> Chennai Express</p>
+        <p><strong>Departure:</strong> 10:00 AM, 10th October 2025</p>
+        <p><strong>Arrival:</strong> 5:00 PM, 10th October 2025</p>
+        <p><strong>Seats:</strong> A1, A2</p>
+        <p><strong>Total Fare:</strong> ₹1,600</p>
+      </div>
 
+    </div>
 
+    <div class="qr-code">
+      <h3 class="inform">Your e-Ticket</h3>
+      <img src="./Qr code.png" alt="QR Code" />
+      <p >Scan this QR code to board the bus.</p>
+    </div>
 
+    <div class="contact inform">
+      <h3>Contact Information</h3>
+      <p><strong>Operator:</strong> XYZ Travels</p>
+      <p><strong>Phone:</strong> +91 9876543210</p>
+      <p><strong>Email:</strong> support@xyztravels.com</p>
+    </div>
 
-
-
-
-
-
-
-
-
-<section class="confirmation">
-  <h1>Booking Confirmed!</h1>
-  <p>Your reservation has been successfully processed. Below are your booking details:</p>
-
-  <div class="details">
-    <h2>Booking Information</h2>
-    <p><strong>Booking ID:</strong> #123456789</p>
-    <p><strong>Passenger Name:</strong> John Doe</p>
-    <p><strong>Route:</strong> Chennai → Madurai</p>
-    <p><strong>Bus:</strong> Chennai Express</p>
-    <p><strong>Departure:</strong> 10:00 AM, 10th October 2025</p>
-    <p><strong>Arrival:</strong> 5:00 PM, 10th October 2025</p>
-    <p><strong>Seats:</strong> A1, A2</p>
-    <p><strong>Total Fare:</strong> ₹1,600</p>
-  </div>
-
-  <div class="qr-code">
-    <h3>Your e-Ticket</h3>
-    <img src="https://via.placeholder.com/150" alt="QR Code" />
-    <p>Scan this QR code to board the bus.</p>
-  </div>
-
-  <div class="contact">
-    <h3>Contact Information</h3>
-    <p><strong>Operator:</strong> XYZ Travels</p>
-    <p><strong>Phone:</strong> +91 9876543210</p>
-    <p><strong>Email:</strong> support@xyztravels.com</p>
-  </div>
-
-  <div class="footer">
-    <p>Thank you for choosing XYZ Travels. We wish you a pleasant journey!</p>
+    <div class="footer">
+      <p>Thank you for choosing XYZ Travels. We wish you a pleasant journey!</p>
+    </div>
   </div>
 </section>
+
+
+
+
 
 
 

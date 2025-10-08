@@ -1,3 +1,4 @@
+/* nav bar */
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
   const navBar = document.querySelector(".navBar");
@@ -13,6 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Toggled navBar. Classes now:", navBar.classList.value);
   });
 });
+
+
+
+
+
+
+
+
+
 
 
 
