@@ -89,3 +89,22 @@ paymentForm.addEventListener('submit', (event) => {
 });
 
 
+
+
+
+
+
+
+
+/* passenger information and payment  */
+document.getElementById('nextToPayment').addEventListener('click', function() {
+  // Validate passenger information form
+  const passengerForm = document.getElementById('passengerForm');
+  if (passengerForm.checkValidity()) {
+    // Hide passenger info and show payment section
+    document.querySelector('.form-step').classList.add('payment-step');
+    document.querySelector('.payment-step').classList.add('active');
+  } else {
+    alert('Please fill in all the required fields.');
+  }
+});

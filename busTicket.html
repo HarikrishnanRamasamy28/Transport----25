@@ -133,7 +133,7 @@
   <div class="routes-grid">
     <a href="/search?from=Chennai&to=Madurai" class="route-card">
       <div class="route-image">
-        <img src="images/chennai_madurai.jpg" alt="Chennai to Madurai">
+        <img src="./hero_img_4.png" alt="Chennai to Madurai" height="20px" width="20px">
       </div>
       <div class="route-info">
         <h3>Chennai → Madurai</h3>
@@ -141,7 +141,7 @@
     </a>
     <a href="/search?from=Chennai&to=Bangalore" class="route-card">
       <div class="route-image">
-        <img src="images/chennai_bangalore.jpg" alt="Chennai to Bangalore">
+        <img src="./hero_img_4.png" alt="Chennai to Bangalore">
       </div>
       <div class="route-info">
         <h3>Chennai → Bangalore</h3>
@@ -149,7 +149,7 @@
     </a>
     <a href="/search?from=Coimbatore&to=Ooty" class="route-card">
       <div class="route-image">
-        <img src="images/coimbatore_ooty.jpg" alt="Coimbatore to Ooty">
+        <img src="./hero_img_4.png" alt="Coimbatore to Ooty">
       </div>
       <div class="route-info">
         <h3>Coimbatore → Ooty</h3>
@@ -157,7 +157,7 @@
     </a>
     <a href="/search?from=Trichy&to=Rameswaram" class="route-card">
       <div class="route-image">
-        <img src="images/trichy_rameswaram.jpg" alt="Trichy to Rameswaram">
+        <img src="./hero_img_4.png" alt="Trichy to Rameswaram">
       </div>
       <div class="route-info">
         <h3>Trichy → Rameswaram</h3>
@@ -215,62 +215,6 @@
 
 
 
-<aside class="filter-panel">
-  <h3>Filters</h3>
-  <form id="filterForm">
-    <!-- Bus Type -->
-    <fieldset>
-      <legend>Bus Type</legend>
-      <label><input type="checkbox" name="busType" value="AC"> AC</label>
-      <label><input type="checkbox" name="busType" value="Non-AC"> Non-AC</label>
-      <label><input type="checkbox" name="busType" value="Sleeper"> Sleeper</label>
-    </fieldset>
-
-    <!-- Departure Time -->
-    <fieldset>
-      <legend>Departure Time</legend>
-      <label><input type="radio" name="departureTime" value="morning"> Morning</label>
-      <label><input type="radio" name="departureTime" value="afternoon"> Afternoon</label>
-      <label><input type="radio" name="departureTime" value="evening"> Evening</label>
-    </fieldset>
-
-    <!-- Price Range -->
-    <fieldset>
-      <legend>Price Range</legend>
-      <input type="range" name="priceRange" min="0" max="1000" step="50">
-      <span id="priceValue">₹0 - ₹1000</span>
-    </fieldset>
-
-    <!-- Amenities -->
-    <fieldset>
-      <legend>Amenities</legend>
-      <label><input type="checkbox" name="amenities" value="wifi"> WiFi</label>
-      <label><input type="checkbox" name="amenities" value="water"> Water Bottle</label>
-      <label><input type="checkbox" name="amenities" value="charging"> Charging Port</label>
-    </fieldset>
-
-    <!-- Provider -->
-    <fieldset>
-      <legend>Provider</legend>
-      <select name="provider">
-        <option value="">All</option>
-        <option value="provider1">Provider 1</option>
-        <option value="provider2">Provider 2</option>
-        <option value="provider3">Provider 3</option>
-      </select>
-    </fieldset>
-
-    <!-- Boarding / Drop Points -->
-    <fieldset>
-      <legend>Boarding / Drop Points</legend>
-      <label><input type="checkbox" name="boardingDrop" value="point1"> Point 1</label>
-      <label><input type="checkbox" name="boardingDrop" value="point2"> Point 2</label>
-      <label><input type="checkbox" name="boardingDrop" value="point3"> Point 3</label>
-    </fieldset>
-
-    <button type="submit">Apply Filters</button>
-  </form>
-</aside>
 
 
 
@@ -396,55 +340,57 @@
 
 
 
-<div class="seat-selection">
-  <h2>Select Your Seats</h2>
-  <div class="seats">
-    <div class="seat" data-seat="A1">A1</div>
-    <div class="seat" data-seat="A2">A2</div>
-    <div class="seat" data-seat="B1">B1</div>
-    <div class="seat" data-seat="B2">B2</div>
-    <!-- Add more seats as needed -->
+
+
+
+
+
+
+
+
+
+<section class="checkout-section">
+  <div class="form-container">
+    <div class="form-step">
+      <h2>Passenger Information</h2>
+      <form id="passengerForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required>
+        
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" placeholder="+91 9876543210" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+        
+        <button type="button" id="nextToPayment">Next: Payment</button>
+      </form>
+    </div>
+
+    <div class="form-step payment-step">
+      <h2>Payment Checkout</h2>
+      <div class="fare-summary">
+        <p>Selected Seats: <span id="selectedSeats">A1, A2</span></p>
+        <p>Total Fare: ₹<span id="totalFare">1000</span></p>
+      </div>
+      <form id="paymentForm">
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+          <option value="creditCard">Credit Card</option>
+          <option value="upi">UPI</option>
+          <option value="wallet">E-Wallet</option>
+        </select>
+        <button type="submit">Pay Now</button>
+      </form>
+    </div>
   </div>
-  <button id="nextStep" disabled>Next: Passenger Info</button>
-</div>
+</section>
 
 
 
 
 
-<div class="passenger-info">
-  <h2>Passenger Information</h2>
-  <form id="passengerForm">
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name" required>
-    <label for="contact">Contact Number:</label>
-    <input type="tel" id="contact" name="contact" required>
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" required>
-    <button type="submit">Next: Payment</button>
-  </form>
-</div>
 
-
-
-
-
-<div class="payment-checkout">
-  <h2>Payment Checkout</h2>
-  <div class="fare-summary">
-    <p>Selected Seats: <span id="selectedSeats">A1, A2</span></p>
-    <p>Total Fare: ₹<span id="totalFare">1000</span></p>
-  </div>
-  <form id="paymentForm">
-    <label for="paymentMethod">Payment Method:</label>
-    <select id="paymentMethod" name="paymentMethod" required>
-      <option value="creditCard">Credit Card</option>
-      <option value="upi">UPI</option>
-      <option value="wallet">E-Wallet</option>
-    </select>
-    <button type="submit">Pay Now</button>
-  </form>
-</div>
 
 
 
@@ -529,6 +475,7 @@
 
 
 
+
 <section id="testimonials">
   <h2>What Our Customers Say</h2>
   <div class="testimonial">
@@ -548,31 +495,67 @@
 
 
 
-<footer>
-  <div class="footer-content">
-    <section class="about">
-      <h3>About Us</h3>
-      <p>XYZ Travels is committed to providing safe and reliable bus services across India.</p>
-    </section>
 
-    <section class="quick-links">
-      <h3>Quick Links</h3>
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Company Info -->
+    <div class="footer-column">
+      <div class="col">
+        <img src="logo.png" alt="Company Logo" class="footer-logo" />
+        <p class="footer-description">Reliable transport solutions across India. Safe, timely, and insured.</p>
+      </div>
+      <p class="footer-contact">
+        <strong>Contact Us:</strong><br />
+        <a href="tel:+912345678901">+91 23456 78901</a><br />
+        <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Book a Ticket</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Our Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/help">Help Center</a></li>
       </ul>
-    </section>
+    </div>
 
-    <section class="social-media">
-      <h3>Follow Us</h3>
-      <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
-    </section>
+    <!-- Social Media -->
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="error.html" class="social-icon">
+          <img src="./facebook.png" alt="Facebook" height="35px" />
+        </a>
+        <a href="error.html" class="social-icon">
+          <img src="./twitter.png" alt="Twitter" height="35px"/>
+        </a>
+        <a href="error.html" class="social-icon">
+          <img src="./instagram.png" alt="Instagram" height="35px"/>
+        </a>
+        <a href="error.html" class="social-icon">
+          <img src="./linkedin.png" alt="LinkedIn" height="35px"/>
+        </a>
+      </div>
+    </div>
   </div>
 
+  <!-- Legal & Copyright -->
   <div class="footer-bottom">
-    <p>&copy; 2025 XYZ Travels. All rights reserved.</p>
+    <p>&copy; 2025 Transport HQ Pvt Ltd. All rights reserved.</p>
+    <p>
+      <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
+    </p>
   </div>
 </footer>
 
