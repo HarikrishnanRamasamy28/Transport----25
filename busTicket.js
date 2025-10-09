@@ -45,23 +45,23 @@ document.querySelector('input[name="priceRange"]').addEventListener('input', fun
 
 
 /* seat selection */
-const seats = document.querySelectorAll('.seat');
-const nextStepButton = document.getElementById('nextStep');
-let selectedSeats = [];
+// const seats = document.querySelectorAll('.seat');
+// const nextStepButton = document.getElementById('nextStep');
+// let selectedSeats = [];
 
-seats.forEach(seat => {
-  seat.addEventListener('click', () => {
-    const seatId = seat.dataset.seat;
-    if (selectedSeats.includes(seatId)) {
-      selectedSeats = selectedSeats.filter(s => s !== seatId);
-      seat.classList.remove('selected');
-    } else {
-      selectedSeats.push(seatId);
-      seat.classList.add('selected');
-    }
-    nextStepButton.disabled = selectedSeats.length === 0;
-  });
-});
+// seats.forEach(seat => {
+//   seat.addEventListener('click', () => {
+//     const seatId = seat.dataset.seat;
+//     if (selectedSeats.includes(seatId)) {
+//       selectedSeats = selectedSeats.filter(s => s !== seatId);
+//       seat.classList.remove('selected');
+//     } else {
+//       selectedSeats.push(seatId);
+//       seat.classList.add('selected');
+//     }
+//     nextStepButton.disabled = selectedSeats.length === 0;
+//   });
+// });
 
 
 

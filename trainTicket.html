@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./logo.png">
+    <title>Transport</title>
+    <link rel="stylesheet" href="./trainTicket.css">
+</head>
+<body>
+    <div class="topbar">
+    <header class="header">
+        <div class="logo">
+        <img src="./logo.png" alt="stackly" />
+        <h2>STACKLY</h2>
+        </div>
+        <div class="bus-container">
+        <img src="./bus.png" alt="" class="moving-bus" height="70px">
+        </div>
+        <button class="hamburger" id="hamburger">☰</button>
+    </header>
+
+    <nav class="navBar">
+        <div class="navLinks">
+        <ul class="linkRight">
+            <li class="dropdown">
+            <a href="./index.html">Home ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="./index.html">Home page 1</a></li>
+            </ul>
+            </li>
+            <li><a href="./busTicket.html">Bus Tickets</a></li>
+            <li><a href="./trainTicket.html">Train Tickets</a></li>
+            <li><a href="./error.html">Offers</a></li>
+            <li><a href="./error.html">About Us</a></li>
+            <li><a href="./error.html">Contact Us</a></li>
+            <li><a href="./error.html">Terms & Conditions</a></li>
+            <li class="./error.html"><button>Log / Sign In</button></li>
+        </ul>
+        </div>
+    </nav>
+    </div>
+
+
+
+
+
+
+<section class="how-it-works slide-in-section">
+  <div class="container">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">🔍</div>
+        <h3>Search</h3>
+        <p>Choose your route, date and passengers.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">
+            <img src="./train.png" alt="" height="50px">
+        </div>
+        <h3>Select</h3>
+        <p>Pick your preferred bus and seat.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">💳</div>
+        <h3>Payment</h3>
+        <p>Pay securely via card, UPI or wallet.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">🎫</div>
+        <h3>Ticket</h3>
+        <p>Get your e-ticket & confirmation instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="hero-search">
+  <div class="hero-container">
+    <h1>Book Your Train Ticket</h1>
+    <form class="search-form">
+      <div class="field-group">
+        <label for="from">From</label>
+        <input type="text" id="from" name="from" placeholder="Departure Station" required>
+      </div>
+      <div class="field-group">
+        <label for="to">To</label>
+        <input type="text" id="to" name="to" placeholder="Arrival Station" required>
+      </div>
+      <div class="field-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="field-group">
+        <label for="class">Class</label>
+        <select id="class" name="class">
+          <option value="sleeper">Sleeper</option>
+          <option value="ac3">AC 3 Tier</option>
+          <option value="ac2">AC 2 Tier</option>
+          <option value="ac1">AC 1 Tier</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label for="passengers">Passengers</label>
+        <input type="number" id="passengers" name="passengers" value="1" min="1">
+      </div>
+      <button type="submit" class="btn-search">Search Trains</button>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Popular Routes / Recommendations Section -->
+<section class="popular-routes">
+  <div class="container">
+    <h2>Popular Routes</h2>
+    <p class="subtitle">Quick picks from popular destinations</p>
+    <div class="routes-list">
+      <div class="slide-track">
+        <a href="/search?from=Kolkata&to=Darjeeling" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Kolkata to Darjeeling">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Kolkata → Darjeeling</h3>
+            <p class="route-detail">Approx 10h / ₹800</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Mumbai&to=Goa" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Mumbai to Goa">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Mumbai → Goa</h3>
+            <p class="route-detail">Approx 12h / ₹1,200</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Kalka&to=Shimla" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Kalka to Shimla">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Kalka → Shimla</h3>
+            <p class="route-detail">Approx 5h / ₹500</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Chennai&to=Ooty" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Chennai to Ooty">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Chennai → Ooty</h3>
+            <p class="route-detail">Approx 9h / ₹900</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Delhi&to=Agra" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Delhi to Agra">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Delhi → Agra</h3>
+            <p class="route-detail">Approx 2h / ₹300</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Trivandrum&to=Kanyakumari" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Trivandrum to Kanyakumari">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Trivandrum → Kanyakumari</h3>
+            <p class="route-detail">Approx 2h / ₹200</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Jaisalmer&to=Jodhpur" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Jaisalmer to Jodhpur">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Jaisalmer → Jodhpur</h3>
+            <p class="route-detail">Approx 5h / ₹450</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Matheran&to=Neral" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Matheran to Neral">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Matheran → Neral</h3>
+            <p class="route-detail">Approx 1h / ₹100</p>
+          </div>
+        </a>
+
+        <!-- duplicate the same set so animation loops seamlessly -->
+        <a href="/search?from=Kolkata&to=Darjeeling" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Kolkata to Darjeeling">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Kolkata → Darjeeling</h3>
+            <p class="route-detail">Approx 10h / ₹800</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Mumbai&to=Goa" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Mumbai to Goa">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Mumbai → Goa</h3>
+            <p class="route-detail">Approx 12h / ₹1,200</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Kalka&to=Shimla" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Kalka to Shimla">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Kalka → Shimla</h3>
+            <p class="route-detail">Approx 5h / ₹500</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Chennai&to=Ooty" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Chennai to Ooty">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Chennai → Ooty</h3>
+            <p class="route-detail">Approx 9h / ₹900</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Delhi&to=Agra" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Delhi to Agra">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Delhi → Agra</h3>
+            <p class="route-detail">Approx 2h / ₹300</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Trivandrum&to=Kanyakumari" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Trivandrum to Kanyakumari">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Trivandrum → Kanyakumari</h3>
+            <p class="route-detail">Approx 2h / ₹200</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Jaisalmer&to=Jodhpur" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Jaisalmer to Jodhpur">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Jaisalmer → Jodhpur</h3>
+            <p class="route-detail">Approx 5h / ₹450</p>
+          </div>
+        </a>
+
+        <a href="/search?from=Matheran&to=Neral" class="route-card">
+          <div class="card-icon">
+            <img src="./train.png" alt="Matheran to Neral">
+          </div>
+          <div class="card-info">
+            <h3 class="route-title">Matheran → Neral</h3>
+            <p class="route-detail">Approx 1h / ₹100</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="view-all">
+      <a href="/popular-routes" class="btn-view-all">View All Routes</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="train-results">
+  <div class="container">
+    <h2>Available Trains</h2>
+    <div class="train-list">
+
+      <div class="train-card">
+        <div class="train-info">
+          <h3>Chennai Express</h3>
+          <p class="route">Chennai → Madurai</p>
+        </div>
+        <div class="train-details">
+          <div class="time-block">
+            <p class="label">Departure</p>
+            <p class="time">10:00 AM</p>
+          </div>
+          <div class="time-block">
+            <p class="label">Arrival</p>
+            <p class="time">5:00 PM</p>
+          </div>
+          <div class="time-block">
+            <p class="label">Duration</p>
+            <p class="time">7h</p>
+          </div>
+        </div>
+        <div class="train-classes">
+          <span class="class available">Sleeper</span>
+          <span class="class available">AC 3 Tier</span>
+          <span class="class sold-out">AC 1 Tier</span>
+        </div>
+        <div class="train-fare">
+          <p class="price">₹800</p>
+          <button class="btn-book">Book Now</button>
+        </div>
+      </div>
+
+      <!-- More train-card elements -->
+      <div class="train-card">
+        <div class="train-info">
+          <h3>Mumbai Express</h3>
+          <p class="route">Chennai → Mumbai</p>
+        </div>
+        <div class="train-details">
+          <div class="time-block">
+            <p class="label">Departure</p>
+            <p class="time">8:00 AM</p>
+          </div>
+          <div class="time-block">
+            <p class="label">Arrival</p>
+            <p class="time">6:00 PM</p>
+          </div>
+          <div class="time-block">
+            <p class="label">Duration</p>
+            <p class="time">10h</p>
+          </div>
+        </div>
+        <div class="train-classes">
+          <span class="class available">Sleeper</span>
+          <span class="class available">AC 3 Tier</span>
+          <span class="class available">AC 2 Tier</span>
+        </div>
+        <div class="train-fare">
+          <p class="price">₹1,200</p>
+          <button class="btn-book">Book Now</button>
+        </div>
+      </div>
+
+      <div class="train-card">
+        <div class="train-info">
+          <h3>Goa Express</h3>
+          <p class="route">Mumbai → Goa</p>
+        </div>
+        <div class="train-details">
+          <div class="time-block">
+            <p class="label">Departure</p>
+            <p class="time">7:30 AM</p>
+          </div>
+          <div class="time-block">
+            <p class="label">Arrival</p>
+            <p class="time">5:30 PM</p>
+          </div>
+          <div class="time-block">
+            <p class="label">Duration</p>
+            <p class="time">10h</p>
+          </div>
+        </div>
+        <div class="train-classes">
+          <span class="class available">Sleeper</span>
+          <span class="class available">AC 3 Tier</span>
+          <span class="class available">AC 2 Tier</span>
+        </div>
+        <div class="train-fare">
+          <p class="price">₹1,000</p>
+          <button class="btn-book">Book Now</button>
+        </div>
+      </div>
+
+      <div class="train-card">
+        <div class="train-info">
+          <h3>Delhi Rajdhani</h3>
+          <p class="route">Chennai → Delhi</p>
+        </div>
+        <div class="train-details">
+          <div class="time-block">
+            <p class="label">Departure</p>
+            <p class="time">6:00 AM</p>
+          </div>
+          <div class="time-block">
+            <p class="label">Arrival</p>
+            <p class="time">6:00 PM</p>
+          </div>
+          <div class="time-block">
+            <p class="label">Duration</p>
+            <p class="time">12h</p>
+          </div>
+        </div>
+        <div class="train-classes">
+          <span class="class available">Sleeper</span>
+          <span class="class available">AC 3 Tier</span>
+          <span class="class available">AC 2 Tier</span>
+        </div>
+        <div class="train-fare">
+          <p class="price">₹1,500</p>
+          <button class="btn-book">Book Now</button>
+        </div>
+      </div>
+
+
+      <!-- Add more -->
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="passenger-details">
+  <div class="img">
+    <img src="./passenger.jpg" alt="" height="500px">
+  </div>
+  <div class="container">
+    <h2>Passenger Details</h2>
+    <form class="passenger-form">
+      <!-- Passenger info fields -->
+      <div class="field-group">
+        <label for="passenger-name">Name</label>
+        <input type="text" id="passenger-name" name="passenger_name" placeholder="Full Name" required>
+      </div>
+
+      <div class="field-group">
+        <label for="passenger-age">Age</label>
+        <input type="number" id="passenger-age" name="passenger_age" min="0" max="120" required>
+      </div>
+
+      <div class="field-group">
+        <label for="passenger-gender">Gender</label>
+        <select id="passenger-gender" name="passenger_gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label for="berth-preference">Berth Preference</label>
+        <select id="berth-preference" name="berth_preference">
+          <option value="">No preference</option>
+          <option value="lower">Lower</option>
+          <option value="middle">Middle</option>
+          <option value="upper">Upper</option>
+          <option value="side-lower">Side Lower</option>
+          <option value="side-upper">Side Upper</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label for="contact-mobile">Contact Mobile</label>
+        <input type="tel" id="contact-mobile" name="contact_mobile" placeholder="10-digit number" pattern="[0-9]{10}" required>
+      </div>
+
+      <div class="field-group">
+        <label for="contact-email">Email (optional)</label>
+        <input type="email" id="contact-email" name="contact_email" placeholder="you@example.com">
+      </div>
+
+      <div class="field-group">
+        <label for="id-proof-type">ID Proof Type</label>
+        <select id="id-proof-type" name="id_proof_type" required>
+          <option value="">Select ID Proof</option>
+          <option value="aadhaar">Aadhaar</option>
+          <option value="passport">Passport</option>
+          <option value="voter">Voter ID</option>
+          <option value="driving">Driving License</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label for="id-proof-number">ID Proof Number</label>
+        <input type="text" id="id-proof-number" name="id_proof_number" placeholder="ID Number" required>
+      </div>
+
+      <div class="field-group">
+        <button type="submit" class="btn-submit">Continue / Proceed to Payment</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="fare-summary">
+  <div class="container">
+    <h2>Fare Summary</h2>
+    <div class="fare-breakdown">
+      <div class="fare-row">
+        <span class="label">Base Fare</span>
+        <span class="amount">₹ 750.00</span>
+      </div>
+      <div class="fare-row">
+        <span class="label">Taxes & Fees</span>
+        <span class="amount">₹ 45.00</span>
+      </div>
+      <div class="fare-row">
+        <span class="label">Service Charge</span>
+        <span class="amount">₹ 5.00</span>
+      </div>
+      <hr class="fare-divider">
+      <div class="fare-row total">
+        <span class="label">Total Payable</span>
+        <span class="amount">₹ 800.00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Optional Add-Ons / Services</h2>
+    <p class="subtitle">Enhance your journey with extra conveniences</p>
+    <form class="addons-form">
+      <div class="addon-item">
+        <label>
+          <input type="checkbox" name="addon_meal" value="meal">
+          Meal on board (₹150)
+        </label>
+      </div>
+      <div class="addon-item">
+        <label>
+          <input type="checkbox" name="addon_travel_insurance" value="insurance">
+          Travel Insurance (₹50)
+        </label>
+      </div>
+      <div class="addon-item">
+        <label>
+          <input type="checkbox" name="addon_priority" value="priority">
+          Priority Booking / Fast Track (₹100)
+        </label>
+      </div>
+      <div class="addon-item">
+        <label for="addon_luggage">
+          Extra Luggage (₹ per kg)
+        </label>
+        <input type="number" id="addon_luggage" name="addon_luggage" min="0" step="1" placeholder="No. of kg">
+      </div>
+      <div class="addon-item">
+        <label>
+          <input type="checkbox" name="addon_wifi" value="wifi">
+          On-board WiFi (₹80)
+        </label>
+      </div>
+
+      <div class="addons-submit">
+        <button type="button" class="btn-addons-apply">Apply Add-Ons</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <h2>Secure Payment</h2>
+    <p class="payment-subtitle">Choose your preferred payment method</p>
+
+    <form class="payment-form">
+      <!-- Credit/Debit Card -->
+      <div class="payment-method">
+        <label>
+          <input type="radio" name="payment-method" value="card" checked>
+          <img src="./debit card.png" alt="Visa, Mastercard" class="payment-icon">
+          Credit/Debit Card
+        </label>
+      </div>
+
+      <!-- UPI -->
+      <div class="payment-method">
+        <label>
+          <input type="radio" name="payment-method" value="upi">
+          <img src="Qr code.png" alt="UPI" class="payment-icon">
+          UPI (Google Pay, PhonePe, Paytm)
+        </label>
+      </div>
+
+      <!-- Wallets -->
+      <div class="payment-method">
+        <label>
+          <input type="radio" name="payment-method" value="wallet">
+          <img src="./wallet.png" alt="Wallets" class="payment-icon">
+          Wallets (Paytm, PhonePe)
+        </label>
+      </div>
+
+      <!-- Net Banking -->
+      <div class="payment-method">
+        <label>
+          <input type="radio" name="payment-method" value="netbanking">
+          <img src="./mobile-banking.png" alt="Net Banking" class="payment-icon">
+          Net Banking
+        </label>
+      </div>
+
+      <!-- Secure Checkout Button -->
+      <div class="checkout-btn-container">
+        <button type="submit" class="btn-checkout">Proceed to Payment</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="ticket-confirmation">
+
+  <div class="container">
+    <h2>Booking Confirmed</h2>
+    <p class="confirmation-message">Thank you for booking with us! Your train ticket has been successfully confirmed.</p>
+
+    <div class="ticket-details">
+      <h3>Ticket Details</h3>
+      <table class="ticket-info">
+        <tr>
+          <td><strong>PNR Number:</strong></td>
+          <td><span id="pnr-number">1234567890</span></td>
+        </tr>
+        <tr>
+          <td><strong>Train Name:</strong></td>
+          <td><span id="train-name">Express 101</span></td>
+        </tr>
+        <tr>
+          <td><strong>From:</strong></td>
+          <td><span id="from-station">Madurai</span></td>
+        </tr>
+        <tr>
+          <td><strong>To:</strong></td>
+          <td><span id="to-station">Chennai</span></td>
+        </tr>
+        <tr>
+          <td><strong>Departure:</strong></td>
+          <td><span id="departure-time">2025-10-10 08:00 AM</span></td>
+        </tr>
+        <tr>
+          <td><strong>Arrival:</strong></td>
+          <td><span id="arrival-time">2025-10-10 02:00 PM</span></td>
+        </tr>
+        <tr>
+          <td><strong>Class:</strong></td>
+          <td><span id="travel-class">AC Sleeper</span></td>
+        </tr>
+        <tr>
+          <td><strong>Passenger Name:</strong></td>
+          <td><span id="passenger-name">John Doe</span></td>
+        </tr>
+        <tr>
+          <td><strong>Seat Number:</strong></td>
+          <td><span id="seat-number">S12</span></td>
+        </tr>
+        <tr>
+          <td><strong>Status:</strong></td>
+          <td><span id="booking-status">Confirmed</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="action-buttons">
+      <button class="btn-download" onclick="downloadTicket()">Download Ticket</button>
+      <button class="btn-print" onclick="printTicket()">Print Ticket</button>
+      <button class="btn-share" onclick="shareTicket()">Share Ticket</button>
+    </div>
+  </div>
+  <div class="booking">
+    <img src="./book confirm.jpg" alt="" height="500px">
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="why-book-with-us">
+  <div class="container">
+    <h2>Why Book With Us</h2>
+
+    <div class="trust-signals">
+      <div class="signal">
+        <img src="./cyber-security.png" alt="Secure Payment">
+        <p>Secure Payment</p>
+      </div>
+      <div class="signal">
+        <img src="./24-hours-support.png" alt="24/7 Support">
+        <p>24/7 Support</p>
+      </div>
+      <div class="signal">
+        <img src="./audit.png" alt="Verified Reviews">
+        <p>Verified Reviews</p>
+      </div>
+    </div>
+
+    <div class="refund-policy">
+      <h3>Flexible Refund Policy</h3>
+      <p>Cancel up to 24 hours before departure for a full refund. Cancellations made within 24 hours are subject to a 50% refund.</p>
+    </div>
+
+    <div class="support">
+      <h3>Customer Support</h3>
+      <p>Reach us via:</p>
+      <ul>
+        <li>Email: support@trainbooker.com</li>
+        <li>Phone: +91 123 456 7890</li>
+        <li>Live Chat: Available 24/7</li>
+      </ul>
+    </div>
+
+    <div class="guarantee">
+      <h3>Our Guarantee</h3>
+      <p>We guarantee the best prices and a hassle-free booking experience. If you find a lower price elsewhere, we'll match it.</p>
+    </div>
+
+    <div class="reviews">
+      <h3>Customer Reviews</h3>
+      <div class="review">
+        <p>"Booking was seamless and the support team was incredibly helpful!"</p>
+        <span>- Priya, Chennai</span>
+      </div>
+      <div class="review">
+        <p>"Great experience! Will definitely use this service again."</p>
+        <span>- Raj, Madurai</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="faq-section">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I book a train ticket?</button>
+      <div class="faq-answer">
+        <p>Enter your departure and arrival stations, select your travel date, choose a train, and proceed to payment.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I change my booking after confirming?</button>
+      <div class="faq-answer">
+        <p>Yes, changes can be made up to 24 hours before departure. Please contact our support team for assistance.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What should I do if I miss my train?</button>
+      <div class="faq-answer">
+        <p>If you miss your train, please contact our support team immediately. We will assist you in rebooking or providing alternatives.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How can I cancel my booking?</button>
+      <div class="faq-answer">
+        <p>You can cancel your booking through your account dashboard or by contacting our support team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Company Info -->
+    <div class="footer-column">
+      <div class="col">
+        <img src="logo.png" alt="Company Logo" class="footer-logo" />
+        <p class="footer-description">Reliable transport solutions across India. Safe, timely, and insured.</p>
+      </div>
+      <p class="footer-contact">
+        <strong>Contact Us:</strong><br />
+        <a href="tel:+912345678901">+91 23456 78901</a><br />
+        <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Our Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/help">Help Center</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="error.html" class="social-icon">
+          <img src="./facebook.png" alt="Facebook" height="35px" />
+        </a>
+        <a href="error.html" class="social-icon">
+          <img src="./twitter.png" alt="Twitter" height="35px"/>
+        </a>
+        <a href="error.html" class="social-icon">
+          <img src="./instagram.png" alt="Instagram" height="35px"/>
+        </a>
+        <a href="error.html" class="social-icon">
+          <img src="./linkedin.png" alt="LinkedIn" height="35px"/>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal & Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Transport HQ Pvt Ltd. All rights reserved.</p>
+    <p>
+      <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script src="./trainTicket.js"></script>
+    
+</body>
+</html>

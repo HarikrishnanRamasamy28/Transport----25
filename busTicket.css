@@ -264,11 +264,12 @@
 
 
 
-/* Prevent weird horizontal scrollbar while the element is off-screen */
+
 
 /* Base styles for your section */
 .how-it-works {
-  background: linear-gradient(135deg, #f7f9fc, #eaf1f8);
+  /* background: linear-gradient(135deg, #f7f9fc, #eaf1f8); */
+  background-color: rgb(239, 154, 145);
   padding: 80px 20px;
   text-align: center;
   color: #333;
@@ -312,7 +313,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #ff7b54, #ffb26b);
+  background:rgb(31, 58, 80) ;
   margin: 15px auto 0;
   border-radius: 2px;
 }
@@ -439,7 +440,9 @@
 /* ===== Sophisticated Hero Search Styles ===== */
 .hero-search {
   position: relative;
-  background: url('./4.jpg')no-repeat center center / cover fixed;
+  background: url('./5.jpg')no-repeat center center / cover fixed;
+  background-size: 1600px 600px; /* Width: 800px, Height adjusts automatically */
+
   height: 90vh;
   display: flex;
   align-items: center;
