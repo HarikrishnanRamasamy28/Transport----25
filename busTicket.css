@@ -425,6 +425,49 @@
   }
 }
 
+/* ====== How It Works Section - Mobile / 450px ====== */
+@media (max-width: 450px) {
+  .how-it-works {
+    padding: 50px 15px;
+  }
+
+  .how-it-works h2 {
+    font-size: 2rem;
+  }
+
+  .how-it-works h2::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  .steps {
+    grid-template-columns:0.9fr; /* stack steps vertically */
+    gap: 20px;
+  }
+
+  .step {
+    padding: 25px 15px;
+    border-radius: 12px;
+    margin-left: 45px;
+  }
+
+  .step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .step h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+
 
 
 
@@ -573,24 +616,43 @@
   }
 }
 
-/* ===== Responsive Adjustments ===== */
-@media (max-width: 768px) {
-  .hero-search-form {
-    width: 90%;
-    padding: 20px;
+/* ===== Hero Search Section - Mobile / 450px ====== */
+@media (max-width: 450px) {
+  .hero-search {
+    height: 110vh; /* shorter hero on small screens */
+    background-size: cover; /* cover the area */
   }
-  .form-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .form-group {
-    min-width: auto;
-  }
+
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.3;
   }
+
   .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-search-form {
+    padding: 20px 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-row {
+    flex-direction: column; /* stack fields vertically */
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .form-group {
+    min-width: 100%;
+  }
+
+  .hero-search-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
   }
 }
 
@@ -792,17 +854,46 @@
   line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* ===== Key Benefits Section - Mobile / 450px ===== */
+@media (max-width: 450px) {
   .key-benefits {
-    padding: 60px 15px;
+    padding: 50px 15px;
   }
+
   .key-benefits h2 {
     font-size: 2rem;
+    margin-bottom: 8px;
   }
+
+  .benefits-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+
   .benefits-grid {
+    grid-template-columns: 1fr; /* stack items vertically */
     gap: 20px;
   }
+
+  .benefit-item {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  .benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .benefit-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .benefit-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
 }
 
 
@@ -813,29 +904,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Reset / base */
-body, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
 
 /* Bus results section */
 .bus-results {
@@ -943,22 +1011,67 @@ body, html {
   color: white;
 }
 
-/* Responsive tweaks */
-@media (max-width: 800px) {
-  .bus-card {
-    grid-template-columns: 1fr; 
-    grid-template-rows: auto auto auto auto;
-    text-align: center;
+/* ===== Bus Results Section - Mobile / 450px ===== */
+@media (max-width: 450px) {
+  .bus-results {
+    padding: 1.5rem 0.5rem;
   }
-  .bus-card .bus-price,
+
+  .bus-results h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .bus-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .bus-card .bus-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .bus-card .bus-info .operator,
+  .bus-card .bus-info .rating,
+  .bus-card .bus-info .distance,
+  .bus-card .bus-timing p {
+    font-size: 0.85rem;
+  }
+
+  .bus-card .bus-price {
+    text-align: left;
+    margin-right: 0;
+    margin-top: 5px;
+  }
+
+  .bus-card .bus-price .price {
+    font-size: 1.3rem;
+  }
+
+  .bus-card .bus-price .currency {
+    font-size: 0.8rem;
+  }
+
   .bus-card .bus-seats {
-    text-align: center;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .bus-card .bus-seats .seats-left {
+    font-size: 0.85rem;
+    margin-right: 0;
+  }
+
+  .bus-card .bus-seats .book-now {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.95rem;
   }
 }
-
-
-
-
 
 
 
@@ -1068,30 +1181,6 @@ button:hover {
 }
 
 
-@media (max-width: 768px) {
-  .form-container {
-    padding: 20px;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  label,
-  input[type="text"],
-  input[type="tel"],
-  input[type="email"],
-  select,
-  button {
-    font-size: 1rem;
-  }
-}
-
-
-
-
-
-
 
 
 
@@ -1158,6 +1247,80 @@ p {
   margin-left:50px;
 }
 
+/* ===== Checkout / Confirmation Section - Mobile / 450px ===== */
+@media (max-width: 450px) {
+  .checkout-section {
+    padding: 15px;
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 20px;
+    border-width: 3px;
+  }
+
+  #passengerForm button,
+  button {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  h2, h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  select {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .fare-summary {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .confirmation {
+    max-width: 100%;
+    padding: 15px;
+    margin: 50px 0;
+  }
+
+  .details h2,
+  .details p,
+  .qr-code p,
+  .contact h3,
+  .footer p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .qr-code img {
+    margin: 20px auto;
+    display: block;
+    height: 70px;
+  }
+
+  .contact h3{
+    margin-right:200px;
+  }
+
+  .inform {
+    margin-left: 0;
+  }
+}
 
 
 
@@ -1178,14 +1341,9 @@ p {
   align-items: start;
   padding: 60px 20px;
   background-color: salmon;
-  /* background: url('./4.jpg')no-repeat center center / cover fixed; */
-  
   font-family: 'Poppins', sans-serif;
   color: #333;
 }
-
-
-
 
 #support .faq,
 #support .contact {
@@ -1205,17 +1363,6 @@ p {
   color:white;
   position: relative;
 }
-
-/* #support .faq h2::after {
-  content: "";
-  width: 50px;
-  height: 4px;
-  background: linear-gradient(135deg,salmon);
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  border-radius: 2px;
-} */
 
 #support details {
   margin-bottom: 15px;
@@ -1296,20 +1443,46 @@ p {
   color: #2563eb;
 }
 
-@media (max-width: 768px) {
+/* ===== Support / FAQ & Contact Section - Mobile / 450px ===== */
+@media (max-width: 450px) {
   #support {
     flex-direction: column;
-    gap: 30px;
-    padding: 40px 15px;
+    gap: 20px;
+    padding: 40px 10px;
   }
-  #support .faq, #support .contact {
+
+  #support .faq,
+  #support .contact {
     max-width: 100%;
-    padding: 25px;
+    padding: 20px;
   }
-  #support .faq h2, #support .contact h2 {
-    font-size: 1.6rem;
+
+  #support .faq h2,
+  #support .contact h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #support summary {
+    font-size: 1rem;
+    padding: 12px 14px;
+  }
+
+  #support details p {
+    font-size: 0.9rem;
+    padding: 0 12px 12px;
+  }
+
+  #support .contact p,
+  #support .contact li {
+    font-size: 0.9rem;
+  }
+
+  #support .contact li::before {
+    margin-right: 8px;
   }
 }
+
 
 
 
@@ -1366,19 +1539,33 @@ h2 {
   color: #388196;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
+  #testimonials {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
   }
 
   .testimonial {
     padding: 15px;
+    border-left-width: 3px;
+    margin-bottom: 15px;
   }
 
   .testimonial p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .testimonial cite {
     font-size: 0.9rem;
   }
 }
+
 
 
 
@@ -1538,23 +1725,71 @@ h2 {
   color: #1abc9c;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
+/* ====== Mobile / Responsive Footer for 450px ====== */
+@media (max-width: 450px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    padding-top: 30px;
   }
-  
+
   .footer-column {
+    margin-left: 0; /* remove extra left margin */
     text-align: center;
+    margin-top: -20px;
   }
-  
+
+  .footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-column h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+
   .social-icons {
     justify-content: center;
   }
-  
-  .footer-bottom {
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .footer-description {
     font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+    margin-top: -80px;
+  }
+
+  .footer-bottom a {
+    margin: 0 5px;
+  }
+
+  .col {
+    flex-direction:row;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .col p {
+    margin-top:30px;
+  }
+
+  .footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
   }
 }
 

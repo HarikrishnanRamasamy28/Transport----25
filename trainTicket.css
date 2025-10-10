@@ -430,19 +430,53 @@
   }
 }
 
+/*== media query ==*/
+@media (max-width: 450px) {
+  /* Adjust padding for smaller screens */
+  .how-it-works {
+    padding: 60px 15px;
+  }
+
+  /* Modify heading size and margin */
+  .how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  /* Stack steps vertically with reduced gap */
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Adjust step padding and icon size */
+  .step {
+    padding: 25px 15px;
+    width: 350px;
+    margin-left: 35px;
+  }
+
+  .step-icon {
+    font-size: 2.5rem;
+  }
+
+  /* Reduce text size for better readability */
+  .step h3 {
+    font-size: 1.4rem;
+  }
+
+  .step p {
+    font-size: 0.9rem;
+  }
+}
 
 
 
 
 
 
-/* General Reset */
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-} */
+
+
 
 /* Hero Section */
 .hero-search {
@@ -542,15 +576,125 @@
 }
 
 /* Responsive */
-@media (max-width: 480px) {
-  .hero-container {
-    padding: 25px;
+@media (max-width: 450px) {
+  /* Hero Section */
+  .hero-search {
+    padding: 20px;
+    min-height: auto;
   }
-  
+
+  .hero-container {
+    padding: 20px;
+    width: 100%;
+    max-width: none;
+    border-radius: 10px;
+  }
+
   .hero-container h1 {
     font-size: 1.5rem;
   }
+
+  .search-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .field-group input,
+  .field-group select {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .btn-search {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* How It Works Section */
+  .how-it-works {
+    padding: 60px 15px;
+  }
+
+  .how-it-works h2 {
+    font-size: 2rem;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .step {
+    padding: 25px;
+  }
+
+  .step-icon {
+    font-size: 2.5rem;
+  }
+
+  .step h3 {
+    font-size: 1.3rem;
+  }
+
+  .step p {
+    font-size: 0.95rem;
+  }
+
+  /* Testimonials Section */
+  .testimonials-section {
+    padding: 60px 15px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-author {
+    font-size: 0.9rem;
+  }
+
+  /* Services Section */
+  .services-section {
+    padding: 60px 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+  }
 }
+
 
 
 
@@ -686,7 +830,7 @@
 }
 
 /* Responsive tweaks */
-@media (max-width: 480px) {
+@media (max-width: 450px) {
   .route-card {
     flex-direction: column;
     align-items: flex-start;
@@ -782,6 +926,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 100px;
 }
 .time-block {
   margin-bottom: 1rem;
@@ -858,20 +1003,94 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media only screen and (max-width: 450px) {
+  /* Hero Section */
+  .hero-search {
+    padding: 20px;
+  }
+  .hero-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+  .hero-container h1 {
+    font-size: 1.5rem;
+  }
+  .search-form {
+    gap: 10px;
+  }
+  .field-group input,
+  .field-group select {
+    font-size: 0.9rem;
+  }
+  .btn-search {
+    font-size: 0.9rem;
+  }
+
+  /* How It Works Section */
+  .how-it-works {
+    padding: 60px 10px;
+  }
+  .how-it-works h2 {
+    font-size: 2rem;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .step {
+    padding: 30px 15px;
+  }
+  .step-icon {
+    font-size: 2.5rem;
+  }
+  .step h3 {
+    font-size: 1.4rem;
+  }
+  .step p {
+    font-size: 0.95rem;
+  }
+
+  /* Train Results Section */
+  .train-results {
+    padding: 1rem;
+  }
   .train-list {
     flex-direction: column;
     align-items: center;
   }
   .train-card {
     flex-direction: column;
-    width: 90%;
-  }
-  .train-info, .train-details, .train-classes, .train-fare {
-    flex: none;
     width: 100%;
+    margin: 0.5rem 0;
+  }
+  .train-info{
+    margin-left: 120px;
+  }
+  .train-details{
+    margin-left: 150px;
+  }
+  .train-classes{
+    width: 150px;
+    margin-left: 110px;
+  }
+  .train-fare {
+    margin-right: 160px;
+  }
+
+  .train-fare .price{
+    margin-right: 40px;
+  }
+  .train-info h3,
+  .train-details .time-block .time,
+  .train-classes .class,
+  .train-fare .price {
+    font-size: 1rem;
+  }
+  .btn-book {
+    font-size: 0.9rem;
   }
 }
+
 
 
 
@@ -956,11 +1175,55 @@
 }
 
 /* Responsive tweaks */
-@media (max-width: 480px) {
+@media screen and (max-width: 450px) {
+  /* Adjust container layout */
+  .passenger-details {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  /* Center the image */
+  .passenger-details .img {
+    margin-left: -20px;
+    margin-top: 1rem;
+    width: 30%;
+    /* height: auto; */
+  }
+
+  /* Adjust container width */
+  .passenger-details .container {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left:2px;
+  }
+
+  /* Adjust heading size */
+  .passenger-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Adjust form layout */
   .passenger-form {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  /* Adjust input and select fields */
+  .field-group input,
+  .field-group select {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Adjust submit button */
+  .btn-submit {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
   }
 }
+
 
 
 
@@ -1182,7 +1445,94 @@
   color: whitesmoke;
 }
 
+/*== media query ==*/
+@media only screen and (max-width: 450px) {
+  /* Container & Section Styling */
+  .fare-summary {
+    flex-direction: column;
+    padding: 1rem;
+  }
 
+  .fare-summary .container {
+    padding: 30px;
+    width: 100%;
+  }
+
+  .fare-summary h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Fare Breakdown */
+  .fare-breakdown {
+    padding: 1rem;
+  }
+
+  .fare-row {
+    font-size: 0.9rem;
+  }
+
+  .fare-divider {
+    margin: 0.5rem 0;
+  }
+
+  .fare-row.total {
+    font-size: 1rem;
+  }
+
+  /* Addons Form */
+  .addons-form {
+    margin: 1rem auto;
+  }
+
+  .addon-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .addon-item label {
+    font-size: 0.9rem;
+  }
+
+  .addon-item input[type="checkbox"] {
+    margin-bottom: 0.5rem;
+  }
+
+  .addon-item input[type="number"] {
+    width: 60px;
+  }
+
+  .addons-submit .btn-addons-apply {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  /* Payment Form */
+  .payment-form h2 {
+    font-size: 1.4rem;
+  }
+
+  .payment-method {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .payment-method input[type="radio"] {
+    margin-bottom: 0.5rem;
+  }
+
+  .payment-method img.payment-icon {
+    margin-right: 0.5rem;
+  }
+
+  .payment-method label {
+    font-size: 0.9rem;
+  }
+
+  .checkout-btn-container .btn-checkout {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+}
 
 
 
@@ -1219,14 +1569,12 @@ h2 {
 }
 
 .ticket-info {
-  /* width: 100%; */
   border-collapse: collapse;
   margin-bottom: 1.5rem;
 }
 
 .ticket-info td {
   padding: 0.8rem;
-  /* border-bottom: 1px solid #ecf0f1; */
 }
 
 .ticket-info td:first-child {
@@ -1257,10 +1605,6 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
-/* :hover {
-  background-color: #2ecc71;
-} */
 
 .btn-print{
   background-color: salmon;
@@ -1293,24 +1637,62 @@ h2 {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .ticket-details {
-    padding: 1.5rem;
+@media only screen and (max-width: 450px) {
+  /* Container */
+  .ticket-confirmation {
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
+  .ticket-confirmation .container {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  /* Header */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  /* Ticket Info */
   .ticket-info td {
     padding: 0.6rem;
   }
 
+  .ticket-info td:first-child {
+    font-size: 0.9rem;
+  }
+
+  .ticket-info td:last-child {
+    font-size: 0.9rem;
+  }
+
+  /* Action Buttons */
   .action-buttons {
     flex-direction: column;
+    align-items: center;
     gap: 0.8rem;
   }
 
-  .action-buttons button {
+  .btn-download,
+  .btn-print,
+  .btn-share {
     width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* Booking Image */
+  .booking img {
+    margin-top: 20px;
+    margin-right: 0;
+    width: 100%;
+    height: auto;
   }
 }
+
 
 
 
@@ -1415,6 +1797,62 @@ h2 {
   color: #777;
 }
 
+@media screen and (max-width: 450px) {
+  /* Container & Section Styling */
+  .why-book-with-us {
+    padding: 1rem;
+  }
+
+  .why-book-with-us h2 {
+    font-size: 1.8rem;
+  }
+
+  .trust-signals {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signal {
+    margin-bottom: 1rem;
+  }
+
+  .signal img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .signal p {
+    font-size: 0.9rem;
+  }
+
+  .refund-policy, .support, .guarantee, .reviews {
+    padding: 1rem;
+  }
+
+  .refund-policy h3, .support h3, .guarantee h3, .reviews h3 {
+    font-size: 1.2rem;
+  }
+
+  .refund-policy p, .support p, .guarantee p {
+    font-size: 0.9rem;
+  }
+
+  .support li {
+    font-size: 0.9rem;
+  }
+
+  .reviews .review {
+    padding: 0.8rem;
+  }
+
+  .reviews .review p {
+    font-size: 0.9rem;
+  }
+
+  .reviews .review span {
+    font-size: 0.8rem;
+  }
+}
 
 
 
@@ -1664,22 +2102,70 @@ h2 {
   color: #1abc9c;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
+/* ====== Mobile / Responsive Footer for 450px ====== */
+@media (max-width: 450px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    padding-top: 30px;
   }
-  
+
   .footer-column {
+    margin-left: 0; /* remove extra left margin */
     text-align: center;
+    margin-top: -20px;
   }
-  
+
+  .footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-column h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+
   .social-icons {
     justify-content: center;
   }
-  
-  .footer-bottom {
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .footer-description {
     font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+    margin-top: -80px;
+  }
+
+  .footer-bottom a {
+    margin: 0 5px;
+  }
+
+  .col {
+    flex-direction:row;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .col p {
+    margin-top:30px;
+  }
+
+  .footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
   }
 }
