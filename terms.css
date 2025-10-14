@@ -261,6 +261,8 @@
 
 
 
+
+
 /* ===== Header ===== */
 .term{
   background-color: pink;
@@ -369,19 +371,64 @@ address p {
 
 
 
-
 /* ===== Responsive ===== */
-@media (max-width: 768px) {
+@media (max-width: 450px) {
+  /* Header section */
+  .term {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .tc-header {
+    width: 90%;
+  }
+
   .tc-header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .tc-header h1::after {
+    height: 3px;
+    bottom: -6px;
+  }
+
+  /* Main content */
+  .tc-main {
+    max-width: 95%;
+    margin: 30px auto;
+    padding: 0 10px;
   }
 
   .tc-main h2 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    padding-left: 8px;
+    margin-bottom: 12px;
   }
 
+  /* Paragraph styling */
   .tc-main p {
     font-size: 0.95rem;
+    padding: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-left: 5px solid salmon;
+    border-right: 5px solid salmon;
+  }
+
+  .tc-main p:hover {
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    padding: 12px;
+  }
+
+  /* Address styling */
+  address {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+
+  address p {
+    margin: 4px 0;
   }
 }
 
@@ -396,7 +443,6 @@ address p {
 
 
 /* ===== Cancellation and Refund Section ===== */
-
 #cancellation-refund {
   background-color: #fff;
   padding: 40px 30px;
@@ -414,11 +460,6 @@ address p {
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
   background-color: rgb(150, 235, 150);
 }
-
-/* #cancellation-refund:hover h2 {
-  color: rgb(3, 79, 3);
-  border-left: 5px solid  rgb(3, 79, 3);
-} */
 
 #cancellation-refund h2 {
   font-size: 1.9rem;
@@ -459,24 +500,57 @@ address p {
 }
 
 
-@media (max-width: 768px) {
+/* ===== Responsive ===== */
+@media (max-width: 450px) {
   #cancellation-refund {
-    padding: 30px 20px;
+    padding: 25px 15px;
+    max-width: 95%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px red, -5px -5px 8px blue;
+  }
+
+  #cancellation-refund:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
   }
 
   #cancellation-refund h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    padding-left: 8px;
+    border-left: 4px solid red;
+    margin-bottom: 15px;
   }
 
   #cancellation-refund h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    padding-left: 6px;
+    border-left: 3px solid blue;
+    margin-top: 15px;
+    margin-bottom: 8px;
   }
 
-  #cancellation-refund p,
+  #cancellation-refund p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  #cancellation-refund ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+
   #cancellation-refund ul li {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+
+  #cancellation-refund strong {
     font-size: 0.95rem;
   }
 }
+
 
 
 

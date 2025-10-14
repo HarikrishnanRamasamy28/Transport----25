@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./logo.png">
+    <title>Transport</title>
+    <link rel="stylesheet" href="./cargo.css">
+</head>
+<body>
+    <div class="topbar">
+  <header class="header">
+    <div class="logo">
+      <img src="./logo.png" alt="stackly" />
+      <h2>STACKLY</h2>
+    </div>
+    <div class="bus-container">
+      <img src="./bus.png" alt="" class="moving-bus" height="70px">
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </header>
+
+  <nav class="navBar">
+    <div class="navLinks">
+      <ul class="linkRight">
+        <li class="dropdown">
+          <a href="./home2.html">Home ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="./home2.html">Home page 2</a></li>
+          </ul>
+        </li>
+        <li><a href="./cargo.html">Cargo booking</a></li>
+        <!-- <li><a href="./trainTicket.html">Train Tickets</a></li> -->
+        <li><a href="./offer.html">Offers</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="./terms.html">Terms & Conditions</a></li>
+        <li class="./error.html"><button 
+          onclick="window.location.href='./sign.html'">Log / Sign In
+        </button></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ===== Cargo Booking Section Header ===== -->
+<section class="cargo-header">
+  <div class="container">
+    <h2>Fast & Secure Cargo Booking</h2>
+    <p>Book your cargo with ease. We handle all types of shipments including fragile, perishable, oversized, and hazardous goods with utmost care and reliability.</p>
+    <a href="./error.html" class="btn-book">Book Your Cargo Now</a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ===== Cargo Booking Form Section ===== -->
+<section class="cargo-form-section" id="cargo-form">
+  <div class="container">
+    <h2>Book Your Cargo</h2>
+    <p>Fill out the form below to schedule your shipment. We ensure safe and timely delivery for all cargo types.</p>
+
+    <form class="cargo-form">
+      <!-- Pickup Location -->
+      <div class="form-group">
+        <label for="pickup">Pickup Location</label>
+        <input type="text" id="pickup" name="pickup" placeholder="Enter pickup address" required>
+      </div>
+
+      <!-- Delivery Location -->
+      <div class="form-group">
+        <label for="delivery">Delivery Location</label>
+        <input type="text" id="delivery" name="delivery" placeholder="Enter delivery address" required>
+      </div>
+
+      <!-- Cargo Type -->
+      <div class="form-group">
+        <label for="cargo-type">Cargo Type</label>
+        <select id="cargo-type" name="cargo-type" required>
+          <option value="">Select Cargo Type</option>
+          <option value="general">General</option>
+          <option value="perishable">Perishable</option>
+          <option value="fragile">Fragile</option>
+          <option value="hazardous">Hazardous</option>
+          <option value="oversized">Oversized</option>
+        </select>
+      </div>
+
+      <!-- Weight & Dimensions -->
+      <div class="form-group">
+        <label for="weight">Weight & Dimensions</label>
+        <input type="text" id="weight" name="weight" placeholder="e.g., 50kg, 2x2x1 m" required>
+      </div>
+
+      <!-- Pickup Date & Time -->
+      <div class="form-group">
+        <label for="pickup-date">Preferred Pickup Date & Time</label>
+        <input type="datetime-local" id="pickup-date" name="pickup-date" required>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="form-group">
+        <label for="contact">Contact Information</label>
+        <input type="text" id="contact" name="contact" placeholder="Phone or Email" required>
+      </div>
+
+      <!-- Attach Documents -->
+      <div class="form-group">
+        <label for="documents">Attach Documents (optional)</label>
+        <input type="file" id="documents" name="documents">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn-submit" 
+        onclick="window.location.href='./error.html'">Get Quote / Book Now
+      </button>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ===== Cargo Types / Services Offered ===== -->
+<section class="cargo-services">
+  <div class="container">
+    <h2>Our Cargo Services</h2>
+    <p>We offer a wide range of cargo solutions to meet your shipping needs safely and efficiently.</p>
+
+    <div class="services-grid">
+      <!-- Standard Cargo -->
+      <div class="service-card">
+        <img src="./standard cargo.png" alt="Standard Cargo">
+        <h3>Standard Cargo</h3>
+        <p>Reliable delivery for general cargo with safe handling and timely schedules.</p>
+      </div>
+
+      <!-- Express Delivery -->
+      <div class="service-card">
+        <img src="./express-delivery.png" alt="Express Delivery">
+        <h3>Express Delivery</h3>
+        <p>Fast-track delivery for urgent shipments, ensuring quick and secure transit.</p>
+      </div>
+
+      <!-- Fragile / Special Handling -->
+      <div class="service-card">
+        <img src="./glass.png" alt="Fragile Cargo">
+        <h3>Fragile / Special Handling</h3>
+        <p>Special care for delicate and sensitive goods to prevent damage during transit.</p>
+      </div>
+
+      <!-- Heavy / Oversized -->
+      <div class="service-card">
+        <img src="./oversized.png" alt="Heavy Cargo">
+        <h3>Heavy / Oversized Cargo</h3>
+        <p>Safe transport for large and heavy items with specialized handling equipment.</p>
+      </div>
+
+      <!-- International Shipping -->
+      <div class="service-card">
+        <img src="./international.png" alt="International Shipping">
+        <h3>International Shipping</h3>
+        <p>Global shipping solutions with customs support and reliable international partners.</p>
+      </div>
+
+      <!-- Refrigerated / Perishable -->
+      <div class="service-card">
+        <img src="./snowflake.png" alt="Refrigerated Cargo">
+        <h3>Refrigerated / Perishable</h3>
+        <p>Maintain freshness with temperature-controlled transport for perishable goods.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===== Pricing & Estimation Section ===== -->
+<section class="pricing-estimation">
+  <div class="container">
+    <h2>Pricing & Estimation</h2>
+    <p>Get an instant estimate for your shipment. Our pricing is transparent and based on weight, distance, and optional services.</p>
+
+    <div class="pricing-cards">
+      <!-- Instant Quote -->
+      <div class="pricing-card">
+        <h3>Instant Quote Calculator</h3>
+        <p>Get real-time shipping quotes instantly by entering your shipment details.</p>
+      </div>
+
+      <!-- Weight & Distance Pricing -->
+      <div class="pricing-card">
+        <h3>Weight & Distance-Based Pricing</h3>
+        <p>Shipping cost calculated based on the weight of your cargo and distance to the destination.</p>
+      </div>
+
+      <!-- Optional Insurance -->
+      <div class="pricing-card">
+        <h3>Optional Insurance Costs</h3>
+        <p>Protect your valuable shipments with additional insurance coverage if needed.</p>
+      </div>
+
+      <!-- Bulk Shipment Discounts -->
+      <div class="pricing-card">
+        <h3>Discounts for Bulk Shipments</h3>
+        <p>Save more when sending multiple or large-volume shipments at once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===== How It Works / Step-by-Step Guide ===== -->
+<section class="how-it-works">
+  <div class="container">
+    <h2>How It Works</h2>
+    <p>Follow these simple steps to book your cargo shipment quickly and safely.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-text">
+          <h3>Enter Cargo Details</h3>
+          <p>Provide information about your shipment, including type, weight, and dimensions.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-text">
+          <h3>Get Quote & Confirm Booking</h3>
+          <p>Receive an instant quote and confirm your booking securely online.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-text">
+          <h3>Pickup & Transport</h3>
+          <p>Our team picks up your cargo and ensures safe transportation to the destination.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-text">
+          <h3>Delivery & Confirmation</h3>
+          <p>Receive your shipment and confirm delivery with our tracking system.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ===== Safety & Insurance Section ===== -->
+<section class="safety-insurance">
+  <div class="container">
+    <h2>Safety & Insurance</h2>
+    <p>We ensure your cargo is handled safely and offer comprehensive insurance options for peace of mind.</p>
+
+    <div class="safety-items">
+      <div class="safety-item">
+        <h3>Cargo Safety Measures</h3>
+        <p>Our team follows strict safety protocols to protect your shipments from damage and loss.</p>
+      </div>
+
+      <div class="safety-item">
+        <h3>Insurance Coverage Options</h3>
+        <p>Choose from various insurance plans to secure your cargo against unforeseen risks.</p>
+      </div>
+
+      <div class="safety-item">
+        <h3>Handling Fragile Goods</h3>
+        <p>Special care and packaging for fragile items to ensure safe transportation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===== FAQs Section ===== -->
+<section class="faq-section">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <p>Find answers to common questions about our cargo services and policies.</p>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq1">
+      <label for="faq1">Can I schedule pickup for the same day?</label>
+      <p class="faq-answer">Yes! We offer same-day pickup for eligible locations depending on availability.</p>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq2">
+      <label for="faq2">What if my cargo is oversized?</label>
+      <p class="faq-answer">Oversized cargo is handled with special equipment and may require prior booking.</p>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq3">
+      <label for="faq3">How do I claim insurance?</label>
+      <p class="faq-answer">You can claim insurance by submitting the required documentation through our online portal or customer support.</p>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq4">
+      <label for="faq4">Payment options accepted</label>
+      <p class="faq-answer">We accept multiple payment methods including credit/debit cards, UPI, net banking, and cash on delivery for some services.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ===== Call-to-Action Section ===== -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Ship Your Cargo?</h2>
+    <p>Choose an option below to get started with our reliable cargo services.</p>
+
+    <div class="cta-buttons">
+      <a href="./error.html" class="cta-btn primary">Book Your Cargo Now</a>
+      <a href="./error.html" class="cta-btn secondary">Get Instant Quote</a>
+      <a href="./error.html" class="cta-btn tertiary">Contact Our Logistics Team</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Company Info -->
+    <div class="footer-column">
+      <div class="col">
+        <img src="logo.png" alt="Company Logo" class="footer-logo" />
+        <p class="footer-description">Reliable transport solutions across India. Safe, timely, and insured.</p>
+      </div>
+      <p class="footer-contact">
+        <strong>Contact Us:</strong><br />
+        <a href="tel:+912345678901">+91 23456 78901</a><br />
+        <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./error.html">Our Services</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./error.html">Help Center</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="error.html" class="social-icon">
+          <img src="./facebook.png" alt="Facebook" height="35px" />
+        </a>
+        <a href="error.html" class="social-icon">
+          <img src="./twitter.png" alt="Twitter" height="35px"/>
+        </a>
+        <a href="error.html" class="social-icon">
+          <img src="./instagram.png" alt="Instagram" height="35px"/>
+        </a>
+        <a href="error.html" class="social-icon">
+          <img src="./linkedin.png" alt="LinkedIn" height="35px"/>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal & Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Transport HQ Pvt Ltd. All rights reserved.</p>
+    <p>
+      <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
+    </p>
+  </div>
+</footer>
+
+
+
+
+
+<script src="./busTicket.js"></script>
+    
+</body>
+</html>

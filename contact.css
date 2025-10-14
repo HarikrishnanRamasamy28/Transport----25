@@ -330,25 +330,28 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .contact-hero h1 {
-    font-size: 2.2em;
-  }
-  .contact-hero p {
-    font-size: 1.1em;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 450px) {
   .contact-hero {
-    height: 50vh;
+    height: 60vh; /* reduce height for small screens */
+    padding: 0 10px;
   }
+
+  .contact-hero h1 {
+    font-size: 2rem; /* smaller heading */
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+
+  .contact-hero p {
+    font-size: 1rem; /* smaller paragraph */
+    margin-bottom: 20px;
+  }
+
   .btn-primary {
-    padding: 12px 24px;
-    font-size: 1em;
+    padding: 12px 25px; /* smaller button */
+    font-size: 1rem;
   }
 }
-
 
 
 
@@ -359,17 +362,13 @@
 
 /* Enhanced Contact Section CSS */
 #contact {
-  /* background:rgb(140, 229, 140); */
-  /* background-color: rgb(177, 169, 169); */
   padding: 60px 20px;
   font-family: Arial, sans-serif;
   color: #333;
 }
 
 .contact-container {
-  /* border: 5px solid salmon; */
   width: 1250px;
-  /* padding: 50px; */
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -441,21 +440,6 @@
   margin-top: 20px;
 }
 
-/* .social-icon {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #007BFF;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.social-icon:hover {
-  color: #0056b3;
-} */
-
-
-
-
 .contact-form {
   flex: 1 1 400px;
   border: 5px solid rgb(31, 58, 80);
@@ -516,11 +500,70 @@ button[type="submit"]:hover {
 }
 
 /* Responsive adjustments */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .contact-container {
     flex-direction: column;
   }
+} */
+
+@media (max-width: 450px) {
+  #contact {
+    padding: 40px 15px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .contact-info,
+  .contact-form {
+    flex: 1 1 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 30px;
+    border-width: 3px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.6em;
+    margin-left: 120px;
+    margin-bottom:20px;
+  }
+
+  .contact-info p,
+  .contact-details-list li,
+  .branch-offices ul li,
+  .social-media h3 {
+    font-size: 0.95em;
+  }
+
+  .contact-form h3 {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    width: 310px;
+    margin-left: 50px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px 10px;
+    font-size: 0.95em;
+  }
+
+  button[type="submit"] {
+    margin-left: 0;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-top-right-radius: 25px;
+  }
 }
+
 
 
 
