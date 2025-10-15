@@ -936,6 +936,14 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.travel-guides .container .guides-grid .guide-card:nth-child(2) p{
+  margin-top:35px;
+}
+
+.travel-guides .container .guides-grid .guide-card:nth-child(3) p{
+  margin-top:15px;
+}
+
 .guide-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -1557,6 +1565,10 @@
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 2rem;
+}
+
+.special-offers .container .offers-grid .offer-card:nth-child(1) p{
+  margin-top: 40px;
 }
 
 /* Grid layout */
