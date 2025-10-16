@@ -1,4 +1,3 @@
-/* nav bar */
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
   const navBar = document.querySelector(".navBar");
@@ -10,10 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hamburger.addEventListener("click", function () {
     navBar.classList.toggle("active");
-    // For debugging:
-    console.log("Toggled navBar. Classes now:", navBar.classList.value);
   });
 });
+
 
 
 

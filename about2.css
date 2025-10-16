@@ -6,6 +6,16 @@
   font-family: Arial, sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* ========== Topbar & Header ========== */
 .topbar {
   position: sticky;
@@ -13,76 +23,56 @@
   z-index: 10;
   display: flex;
   align-items: center;
-  gap: 270px;
+  justify-content: space-between;
   padding: 15px 40px;
-  background-color:rgb(31, 58, 80);
+  background-color: rgb(31, 58, 80);
   color: #fff;
-  overflow: visible;
+  width: 100%;
 }
+
 .header {
   display: flex;
   align-items: center;
   gap: 20px;
-  z-index: 20;
 }
+
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .logo img {
   height: 70px;
 }
+
 .logo h2 {
-  margin-bottom: -1px;
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 1px;
-  color:rgb(217, 144, 9);
-}
-
-/* ========== Bus Animation ========== */
-.bus-container {
-  position: absolute;
-  top: 15%;
-  left: 0;
-  transform: translateY(-50%);
-  overflow: visible;
-  pointer-events: none;
-  z-index: 200;
-  margin-left: 430px;
-}
-.moving-bus {
-  position: absolute;
-  height: 70px;
-  animation: drive 3s linear infinite;
-  z-index: 250;
-}
-@keyframes drive {
-  0% {
-    left: -160px;
-  }
-  100% {
-    left: calc(10% + 5px);
-  }
+  color: rgb(217, 144, 9);
 }
 
 /* ========== Navigation / Links ========== */
 .hamburger {
   display: none;
-  font-size: 38px;
+  font-size: 44px;
   background: none;
   border: none;
-  color: #fff;
+  color: white;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.hamburger:hover {
-  transform: rotate(90deg);
-}
+
 .navBar {
   display: block;
 }
+
+.navLinks {
+  width: 100%;
+  /* overflow-x: hidden; */ /* removed to allow dropdown to show */
+}
+
 .linkRight {
   display: flex;
   flex-direction: row;
@@ -90,6 +80,7 @@
   align-items: center;
   list-style: none;
 }
+
 .linkRight a {
   text-decoration: none;
   color: #fff;
@@ -97,6 +88,7 @@
   position: relative;
   transition: color 0.3s ease;
 }
+
 .linkRight a::after {
   content: "";
   position: absolute;
@@ -104,21 +96,22 @@
   height: 2px;
   left: 0;
   bottom: -4px;
-  /* background:rgb(223, 181, 104); */
   transition: width 0.3s ease;
 }
+
 .linkRight a:hover {
-  color:rgb(217, 144, 9);
+  color: rgb(217, 144, 9);
 }
+
 .linkRight a:hover::after {
   width: 100%;
 }
+
 .linkRight button {
   padding: 6px 12px;
-  margin-top:-2px;
-  background:rgb(217, 144, 9);
+  background: rgb(217, 144, 9);
   width: 120px;
-  color:black;
+  color: black;
   border: none;
   height: 40px;
   border-top-right-radius: 40px;
@@ -127,133 +120,129 @@
   font-weight: bold;
   transition: background 0.3s ease;
 }
+
 .linkRight button:hover {
-  background:white;
-  color:rgb(31, 58, 80);
+  background: white;
+  color: rgb(31, 58, 80);
 }
-.dropdown {
-  position: relative;
+
+/* ========== Dropdown Menu ========== */
+.linkRight li.dropdown {
+  position: relative; /* parent reference for absolute menu */
 }
+
+/* Dropdown appears ABOVE parent link */
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 100%; /* show above the link */
   left: 0;
-  background:white;
+  margin-top: 5px;
+  background: white;
   min-width: 150px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
   border-radius: 6px;
   overflow: hidden;
   z-index: 1000;
 }
-.dropdown-menu li {
-  width: 100%;
-}
+
 .dropdown-menu li a {
   display: block;
   padding: 10px 15px;
-  color:rgb(31, 58, 80);
+  color: rgb(31, 58, 80);
   text-decoration: none;
   transition: background 0.3s ease;
 }
+
 .dropdown-menu li a:hover {
-  background:rgb(217, 144, 9);
-  color:black;
+  background: rgb(217, 144, 9);
+  color: black;
   font-weight: bold;
 }
-.dropdown:hover .dropdown-menu {
+
+
+/* .linkRight li.dropdown:hover > .dropdown-menu {
   display: block;
+} */
+
+/* Desktop: show on hover */
+@media (min-width: 451px) {
+  .linkRight li.dropdown:hover > .dropdown-menu {
+    display: block;
+  }
 }
 
 /* ========== Mobile / Responsive ========== */
 @media (max-width: 450px) {
   .topbar {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-    gap: 20px;
+    align-items: stretch;
+    padding: 15px 15px;
+    gap: 10px;
   }
+
   .logo {
     margin-left: 0;
   }
+
   .hamburger {
     display: block;
-    z-index: 30;
     align-self: flex-end;
-    margin-left: 140px;
-    margin-bottom: 13px;
+    margin-left: 80px;
+    margin-bottom: 10px;
   }
+
   .navBar {
     display: none;
     width: 100%;
-    /* background: #fff; */
-    padding: 15px 0;
-    border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
   }
+
   .navBar.active {
     display: block !important;
   }
+
   .linkRight {
     flex-direction: column;
     gap: 20px;
     padding: 10px 20px;
-    /* background: #fff; */
   }
 
   .linkRight button {
-    background-color:rgb(223, 181, 104);
+    background-color: rgb(223, 181, 104);
     color: #555;
-  }
-
-  .linkRight a {
-    color:white !important;
-    font-size: 18px;
-  }
-  .linkRight button {
     width: 100%;
     border-radius: 6px;
   }
+
+  .linkRight a {
+    color: #fff !important;
+    font-size: 18px;
+  }
+
+  /* Mobile dropdown shows below parent (clickable) */
   .dropdown-menu {
-    margin-left: 0;
     position: relative;
     top: 0;
+    left: 0;
+    background-color: rgb(31, 58, 80);
+    border-radius: 0;
+    box-shadow: none;
+    display: none; /* hidden initially */
   }
 
   .dropdown-menu li a {
-    background-color:rgb(223, 181, 104) !important;
-    color:#555 !important;
-  }
-  
-
-  /* Bus container adjustments (optional or hide) */
-  .bus-container {
-    /* You may hide the bus on small screens */
-    position: absolute;
-    top: auto;
-    bottom: 16%;
-    left: 5%;
-    transform: none;
-    margin-left: 305px;
-  }
-    .moving-bus {
-    position: relative;
-    height: 50px; /* smaller on mobile */
-    animation: drive-mobile 4s linear infinite;
-    left: 0;
-    top: 0;
-    z-index: 250;
+    background-color: rgb(223, 181, 104) !important;
+    color: #555 !important;
   }
 
-  @keyframes drive-mobile {
-    0% {
-      left: -80px;
-    }
-    100% {
-      left: calc(3% + 10px);
-    }
+  /* Show dropdown when parent gets focus */
+  .linkRight li.dropdown:focus-within > .dropdown-menu {
+    display: block;
   }
 }
+
 
 
 
