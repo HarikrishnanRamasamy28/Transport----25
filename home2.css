@@ -307,35 +307,36 @@ html, body {
   background-color:salmon;
 }
 
-/* ===== Responsive ===== */
+
+/* ===== Cargo Hero Section - Mobile 450px ===== */
 @media (max-width: 450px) {
   .hero-cargo {
-    height: 420px;
-    background-attachment: scroll; /* better for small devices */
-    padding: 40px 10px;
+    height: 400px; /* reduce height for small screens */
+    background-attachment: scroll; /* fixed background may cause issues on mobile */
   }
 
   .hero-cargo .hero-content {
-    max-width: 100%;
+    max-width: 90%; /* fit inside mobile screen */
     padding: 0 10px;
   }
 
   .hero-cargo h1 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-size: 1.8rem; /* smaller heading */
+    margin-bottom: 20px;
   }
 
   .hero-cargo p {
-    font-size: 1rem;
+    font-size: 1rem; /* smaller paragraph */
     margin-bottom: 20px;
   }
 
   .hero-cargo .hero-cta-btn {
-    padding: 10px 25px;
+    padding: 12px 25px; /* smaller button */
     font-size: 1rem;
-    border-top-right-radius: 30px;
+    border-top-right-radius: 30px; /* slightly smaller radius */
   }
 }
+
 
 
 
@@ -467,15 +468,9 @@ html, body {
     margin-left: -510px;
   }
 
-  /* .loyalty h2::after {
-    width: 35px;
-    height: 3px;
-  } */
-
   .loyalty p {
     font-size: 0.95rem;
     margin-bottom: 25px;
-    /* margin-left: -400px; */
     width: 400px;
   }
 
@@ -490,7 +485,7 @@ html, body {
     width: 35%;
     padding: 25px 15px;
     border-width: 3px;
-    animation: none; /* Optional: disable pulse on small screens for better performance */
+    animation: none; 
   }
 
   .tier h3 {
@@ -509,6 +504,8 @@ html, body {
     margin-left: -520px;
   }
 }
+
+
 
 
 
@@ -579,12 +576,7 @@ html, body {
   font-weight: bold;
 
 
-  /* flex: 1 1 250px;
-  text-align: left;
-  margin-top: 200px;
-  background-color: rgb(140, 229, 140);
-  padding: 30px;
-  font-weight: bold; */
+
 }
 
 .corporate-info ul {
@@ -608,12 +600,6 @@ html, body {
   box-shadow: 0 0 25px 10px rgb(223, 6, 6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-
-  /* flex: 1 1 350px;
-  padding: 30px 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 25px 10px rgb(223, 6, 6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
 .corporate-form:hover {
@@ -687,22 +673,16 @@ html, body {
   }
 
   .corporate-info {
-    width: 40%;              /* almost full width on mobile */
-    margin-top: 20px;        /* reduce top margin */
-    padding: 20px;           /* reduce padding */
-    text-align: center;      /* optional: center text on mobile */
+    width: 40%;              
+    margin-top: 20px;        
+    padding: 20px;          
+    text-align: center;      
     margin-left: 10px;
     margin-bottom: 30px;
   }
 
-  /* .corporate-form,
-  .corporate-info {
-    flex: 1 1 10%; 
-    margin-top: 30px;
-  } */
-
   .corporate-form {
-    width:40%;   /* almost full width on mobile */
+    width:40%;   
     padding: 20px;
     margin-left: 10px;
   }
@@ -1150,7 +1130,6 @@ html, body {
 
   .ticketing-alt h2 {
     font-size: 1.8rem;
-    /* margin-left: -400px; */
     width: 400px;
     margin-bottom: 30px;
   }
@@ -1490,7 +1469,6 @@ html, body {
   .policy-header p {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
-    /* margin-left: -350px */
     width: 400px;
   }
 
@@ -1606,7 +1584,9 @@ html, body {
   font-size: 1rem;
   color: #444;
   line-height: 1.5;
+  width: 300px !important;
   margin-bottom: 1.5rem;
+  margin-left: 10px !important;
 }
 
 .offer-tag {
@@ -1674,13 +1654,13 @@ html, body {
   }
 
   .offers-grid {
-    grid-template-columns: 1fr; /* still one column */
+    grid-template-columns: 1fr;
     gap: 20px;
-    justify-items: center; /* centers the cards horizontally */
+    justify-items: center; 
   }
 
   .offer-card {
-    width: 40%;      /* reduces the width of each card */
+    width: 40%;      
     margin-left: -500px;
 
   }
