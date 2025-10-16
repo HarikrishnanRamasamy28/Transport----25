@@ -9,12 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hamburger.addEventListener("click", function () {
     navBar.classList.toggle("active");
-    // For debugging:
-    console.log("Toggled navBar. Classes now:", navBar.classList.value);
   });
 });
-
-
 
 
 
