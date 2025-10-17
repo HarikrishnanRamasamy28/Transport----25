@@ -1,155 +1,132 @@
-/* ===== Global Reset ===== */
+/* Basic resets */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
-/* ===== Background Section ===== */
-.signin-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #1f3a50, #2e8b57);
-  color: #fff;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color:rgb(31, 58, 80);
+  color:salmon;
 }
 
-/* ===== Sign In Container ===== */
-.signin-container {
+/* Containers */
+.signin-container,
+.forgot-section .container,
+.signup-section .container {
   width: 100%;
   max-width: 400px;
-  padding: 20px;
-}
-
-/* ===== Sign In Box ===== */
-.signin-box {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 40px 30px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  animation: fadeIn 0.8s ease-in-out;
-}
-
-/* ===== Header ===== */
-.signin-box h1 {
-  font-size: 1.6rem;
-  color: #ffd93d;
-  margin-bottom: 10px;
-}
-
-.signin-box h2 {
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 30px;
-}
-
-/* ===== Form ===== */
-.signin-form .form-group {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.signin-form label {
-  font-size: 0.9rem;
-  color: #eee;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.signin-form input {
-  width: 100%;
-  padding: 12px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background:rgb(31, 58, 80);
   border-radius: 8px;
-  border: none;
-  outline: none;
+  /* border: 5px solid black; */
+  box-shadow: 0 0 15px 10px rgba(240, 235, 239, 0.984);
+
+  margin-top: 130px;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color:white;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-group input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  color: #333;
-  transition: box-shadow 0.3s ease;
+}
+.form-group input:focus {
+  border-color: salmon;
+  outline: none;
 }
 
-.signin-form input:focus {
-  box-shadow: 0 0 0 3px #ffd93d;
-}
-
-/* ===== Options (Remember Me / Forgot Password) ===== */
+/* Options line */
 .form-options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
-  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
-
 .form-options a {
-  color: #ffd93d;
   text-decoration: none;
+  color:rgb(237, 180, 74);
 }
-
 .form-options a:hover {
   text-decoration: underline;
 }
 
-/* ===== Sign In Button ===== */
-.btn-signin {
+/* Buttons */
+button {
+  display: block;
   width: 100%;
-  padding: 12px;
-  background-color: #ffd93d;
-  color: #1f3a50;
+  padding: 0.75rem;
+  background:rgb(244, 208, 62);
+  color:#555;
   font-weight: bold;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+}
+button:hover {
+  background:rgb(255, 204, 0);
 }
 
-.btn-signin:hover {
-  background-color: #ffb84c;
-  transform: translateY(-2px);
+/* Hide forgot & signup initially */
+.forgot-section,
+.signup-section {
+  display: none;
+  margin-top: 2rem;
 }
 
-/* ===== Signup Text ===== */
+/* Signup text link */
 .signup-text {
-  margin-top: 20px;
-  font-size: 0.95rem;
-  color: #eee;
+  text-align: center;
+  margin-top: 1rem;
 }
-
 .signup-text a {
-  color: #ffd93d;
+  color: rgb(237, 180, 74);
   text-decoration: none;
 }
-
 .signup-text a:hover {
   text-decoration: underline;
 }
 
-/* ===== Animation ===== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+
+.back{
+  color:salmon;
+  text-decoration: none;
+
 }
 
-/* ===== Responsive for 450px ===== */
-@media (max-width: 450px) {
-  .signin-box {
-    padding: 30px 20px;
-  }
-
-  .signin-box h1 {
-    font-size: 1.3rem;
-  }
-
-  .signin-box h2 {
-    font-size: 1rem;
-  }
-
-  .btn-signin {
-    font-size: 1rem;
-    padding: 10px;
-  }
+.back:hover{
+  border-bottom: 2px solid salmon;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
