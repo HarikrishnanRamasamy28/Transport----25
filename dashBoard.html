@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TransportCo – Dashboard</title>
+  <link rel="stylesheet" href="./dashBoard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <h2>TransportCo</h2>
+        <button class="back-btn" onclick="window.location.href='./home2.html'">go back</button>
+        <!-- <button class="toggle-btn" id="toggleBtn">☰</button> -->
+      </div>
+      <nav class="nav">
+        <a href="./dashBoard.html" class="nav-item active">Dashboard</a>
+        <a href="./error.html" class="nav-item">Shipments</a>
+        <a href="./error.html" class="nav-item">Fleet & Vehicles</a>
+        <a href="./error.html" class="nav-item">Drivers</a>
+        <a href="./error.html" class="nav-item">Routes</a>
+        <a href="./error.html" class="nav-item">Reports</a>
+        <a href="./error.html" class="nav-item">Settings</a>
+        <a href="./error.html" class="nav-item logout">Logout</a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="header">
+        <div class="header-left">
+          <h1>Dashboard</h1>
+        </div>
+        <div class="header-right">
+          <div class="profile">
+            <span>Admin</span>
+            <img src="./man 2.jpg" alt="Profile">
+          </div>
+        </div>
+      </header>
+
+      <section class="widgets">
+        <div class="widget">
+          <h3>Total Shipments (Month-to-Date)</h3>
+          <p class="value">1,245</p>
+          <p class="label">Compared to last month: +12%</p>
+        </div>
+        <div class="widget">
+          <h3>Active Vehicles</h3>
+          <p class="value">86</p>
+          <p class="label">Out of fleet of 120</p>
+        </div>
+        <div class="widget">
+          <h3>Drivers On Duty</h3>
+          <p class="value">23</p>
+          <p class="label">Today (08:00–18:00)</p>
+        </div>
+        <div class="widget">
+          <h3>Pending Deliveries</h3>
+          <p class="value">12</p>
+          <p class="label">Delayed >30 mins: 4</p>
+        </div>
+      </section>
+
+      <section class="charts-and-tables">
+        <div class="chart">
+          <h3>Shipments by Region</h3>
+          <div class="chart-placeholder">[Map / Bar chart here]</div>
+        </div>
+        <div class="table">
+          <h3>Recent Deliveries</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Delivery ID</th>
+                <th>Vehicle</th>
+                <th>Driver</th>
+                <th>Status</th>
+                <th>ETA</th>
+                <th>Destination</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>DEL-10045</td><td>V012</td><td>John Doe</td><td>In Transit</td><td>14:30</td><td>Chennai</td></tr>
+              <tr><td>DEL-10046</td><td>V033</td><td>Mary Smith</td><td>Pending</td><td>15:10</td><td>Coimbatore</td></tr>
+              <tr><td>DEL-10047</td><td>V007</td><td>Mike Johnson</td><td>Completed</td><td>13:50</td><td>Madurai</td></tr>
+              <tr><td>DEL-10048</td><td>V021</td><td>Alice Brown</td><td>Delayed</td><td>16:00</td><td>Trichy</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="quick-actions">
+        <h3>Quick Actions</h3>
+        <div class="actions-grid">
+          <button class="action-btn" 
+            onclick="window.location.href='./error.html'">Add New Shipment
+          </button>
+          <button class="action-btn"
+             onclick="window.location.href='./error.html'">Register Vehicle
+          </button>
+          <button class="action-btn"  
+             onclick="window.location.href='./error.html'">Assign Driver
+          </button>
+          <button class="action-btn"  
+             onclick="window.location.href='./error.html'">Generate Report
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // const toggleBtn = document.getElementById('toggleBtn');
+    // const sidebar = document.getElementById('sidebar');
+    // toggleBtn.addEventListener('click', () => {
+    //   sidebar.classList.toggle('collapsed');
+    // });
+  </script>
+</body>
+</html>
