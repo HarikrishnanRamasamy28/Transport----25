@@ -1,0 +1,320 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* ===== Layout ===== */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 250px;
+  background-color: #1f3a60;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.brand h2 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #345b93;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+}
+
+.logout-btn {
+  background-color: #1f3a60;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #345b93;
+}
+
+/* ===== Cards Section ===== */
+
+.cards {
+  display:flex;              /* remove flex */
+  flex-direction: row;
+  margin-bottom: 30px;
+  text-align: center;          /* center inline-block cards */
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  /* remove flex: 1 1 250px; */
+  display: inline-block;       /* allow cards side-by-side */
+  vertical-align: top;
+  width: calc(33.333% - 20px); /* three cards per row (gap approx 20px) */
+  max-width: 300px;            /* optional cap */
+  margin: 10px;                /* gap around each card */
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;      /* include padding in width */
+}
+
+
+.card h3 {
+  color: #1f3a60;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ===== Table Section ===== */
+.data-table h2 {
+  margin-bottom: 15px;
+  color: #1f3a60;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #1f3a60;
+  color: #fff;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.status.delivered { background-color: #28a745; }
+.status.in-transit { background-color: #ffc107; }
+.status.pending { background-color: #dc3545; }
+
+
+
+
+/* ===== Upcoming Deliveries ===== */
+.upcoming {
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming h2 {
+  color: #1f3a60;
+  margin-bottom: 10px;
+}
+
+.upcoming ul {
+  list-style: none;
+}
+
+.upcoming li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.upcoming li span {
+  color: #1f3a60;
+  font-weight: 600;
+}
+
+/* ===== Driver Performance ===== */
+.performance {
+  margin-top: 30px;
+}
+
+.performance h2 {
+  color: #1f3a60;
+  margin-bottom: 15px;
+}
+
+.performance-grid {
+  display:flex;       /* remove flex layout */
+  flex-direction: row;
+  margin: 0 -10px;       /* negative margin to balance card margins */
+}
+
+.performance-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  
+  display: inline-block;     /* allow side-by-side cards */
+  vertical-align: top;
+  width: calc(33.333% - 20px); /* three cards per row example, subtract gap */
+  margin: 10px;               /* gap around each card */
+  box-sizing: border-box;     /* include padding in width */
+}
+
+.performance-card h4 {
+  color: #1f3a60;
+  margin-bottom: 8px;
+}
+
+/* ===== Feedback Section ===== */
+.feedback {
+  margin-top: 30px;
+}
+
+.feedback h2 {
+  color: #1f3a60;
+  margin-bottom: 15px;
+}
+
+.feedback-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+
+
+/* ===== Responsive (450px) ===== */
+@media (max-width: 450px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .menu a {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+    .card {
+    display: block;            /* full-width stack */
+    width: 100%;
+    max-width: none;
+    margin: 0 0 20px 0;        /* bottom spacing only */
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+    .performance-grid {
+    flex-direction: column;
+  }
+
+  .performance-card {
+    display: block;          /* stack vertically */
+    width: 100%;             /* full width of container */
+    max-width: none;
+    margin: 0 0 20px 0;      /* bottom margin for spacing */
+  }
+
+  .upcoming h2{
+    margin-left: 50px;
+  }
+
+  .upcoming li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-left: 100px;
+  }
+
+  .feedback-card p {
+    font-size: 0.9rem;
+  }
+}

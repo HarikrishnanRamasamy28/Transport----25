@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TransportCo – Dashboard</title>
+  <link rel="stylesheet" href="./dashBoard.css" />
+</head>
+<body>
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <h2>🚛 TransportCo</h2>
+      </div>
+      <nav class="menu">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Bookings</a>
+        <a href="#">Vehicles</a>
+        <a href="#">Drivers</a>
+        <a href="#">Reports</a>
+        <a href="#">Customers</a>
+        <a href="#">Settings</a>
+        
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h1>Dashboard Overview</h1>
+        <button class="logout-btn">Logout</button>
+      </header>
+
+      <!-- Cards Section -->
+      <section class="cards">
+        <div class="card">
+          <h3>Total Vehicles</h3>
+          <p>58</p>
+        </div>
+        <div class="card">
+          <h3>Active Drivers</h3>
+          <p>34</p>
+        </div>
+        <div class="card">
+          <h3>Today's Bookings</h3>
+          <p>120</p>
+        </div>
+        <div class="card">
+          <h3>Revenue (Today)</h3>
+          <p>$5,320</p>
+        </div>
+      </section>
+
+      <!-- Recent Deliveries Table -->
+      <section class="data-table">
+        <h2>Recent Deliveries</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Driver</th>
+              <th>Vehicle</th>
+              <th>Status</th>
+              <th>Delivery Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#001</td>
+              <td>John Doe</td>
+              <td>Truck A12</td>
+              <td><span class="status delivered">Delivered</span></td>
+              <td>28 Oct 2025</td>
+            </tr>
+            <tr>
+              <td>#002</td>
+              <td>Ravi Kumar</td>
+              <td>Van B20</td>
+              <td><span class="status in-transit">In Transit</span></td>
+              <td>28 Oct 2025</td>
+            </tr>
+            <tr>
+              <td>#003</td>
+              <td>Ashok Singh</td>
+              <td>Truck D14</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>29 Oct 2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Upcoming Deliveries -->
+      <section class="upcoming">
+        <h2>Upcoming Deliveries</h2>
+        <ul>
+          <li><strong>#004:</strong> Chennai → Bangalore <span>30 Oct 2025</span></li>
+          <li><strong>#005:</strong> Delhi → Jaipur <span>31 Oct 2025</span></li>
+          <li><strong>#006:</strong> Mumbai → Pune <span>01 Nov 2025</span></li>
+        </ul>
+      </section>
+
+      <!-- Driver Performance Section -->
+      <section class="performance">
+        <h2>Driver Performance</h2>
+        <div class="performance-grid">
+          <div class="performance-card">
+            <h4>John Doe</h4>
+            <p>Trips: 25</p>
+            <p>Rating: ⭐⭐⭐⭐☆</p>
+          </div>
+          <div class="performance-card">
+            <h4>Ravi Kumar</h4>
+            <p>Trips: 19</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+          </div>
+          <div class="performance-card">
+            <h4>Akash Verma</h4>
+            <p>Trips: 22</p>
+            <p>Rating: ⭐⭐⭐⭐☆</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Messages / Feedback Section -->
+      <section class="feedback">
+        <h2>Customer Feedback</h2>
+        <div class="feedback-card">
+          <p>“Excellent delivery time, smooth process!” – <strong>Rahul Sharma</strong></p>
+        </div>
+        <div class="feedback-card">
+          <p>“Driver was professional and friendly.” – <strong>Meena Patel</strong></p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
